@@ -255,7 +255,7 @@ module.exports = [
         lay_season: 'summer/autumn/winter',  
         family : "Phasianidae",
         fun_fact :'This a blue cuckoo with a reversible 3rd toe like most cuckoos and prefers jump and flop between the trees in its natural habitat of Madagascar',
-        order: "Gruiformes",
+        order: "Galliformes",
         wingspan_cm: 4
      },
 
@@ -270,7 +270,7 @@ module.exports = [
         lay_season: 'autumn/winter/spring',  
         family : "Phasianidae",
         fun_fact :'When danger is near they will squat still instead of running and they are ground dwellers that like to forage for food in family-related coveys.',
-        order: "Gruiformes",
+        order: "Galliformes",
         wingspan_cm: 6
      },
      {
@@ -284,7 +284,7 @@ module.exports = [
         lay_season: 'spring/summer',  
         family : "Odontophoridae",
         fun_fact :'They have a characteristic feather plume on their heads; males are easily distinguished by their black faces and these birds thrive in the arid deserts around southern USA and Mexico',
-        order: "Gruiformes",
+        order: "Galliformes",
         wingspan_cm: 7
      },
      {
@@ -757,7 +757,7 @@ module.exports = [
       length_cm:29,
       weight_g: 106,
       lay_season: 'spring/summer',  
-      family : -1,
+      family : "Turdidae",
       fun_fact :'One of the most common birds in the UK; it is known for singing a mellow song. Males are black with orange-yellow beaks while females are brown with spots and streaks and have a brown beak',
       order: "Passeriformes",
       wingspan_cm:35
@@ -771,7 +771,7 @@ module.exports = [
       length_cm:14,
       weight_g: 12,
       lay_season: 'spring/summer',  
-      family : -1,
+      family : "Maluridae",
       fun_fact :'One of the first Australian birds to be described. The have been labelled the least loyal birds as one female flirts and courts with up to 13 other males during breeding season and three-quarters of births are sired from males outside of the bird\'s current social group',
       order: "Passeriformes",
       wingspan_cm:27
