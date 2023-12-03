@@ -1,4 +1,7 @@
-function createWingsShape_rel(){
+const format = require('pg-format')
+const{parseObjToNestedArr,createWingsRef,createOrdersRef,createFamiliesRef,addWIdToOrders,addOIdToFamilies,addFIdToBirds} = require('../utility_funcs/utility_funcs.js')
+//creating the tables
+function createWingsShape_rel(){//wing_shape table
     return db.query(`
     CREATE TABLE wing_shape (
         wing_id SERIAL PRIMARY KEY,
@@ -9,7 +12,7 @@ function createWingsShape_rel(){
     `)
 }
 
-function createBirdOrders_rel(){
+function createBirdOrders_rel(){//bird_orders table
     return db.query(`
     CREATE TABLE bird_orders (
         order_id SERIAL PRIMARY KEY,
@@ -21,7 +24,7 @@ function createBirdOrders_rel(){
     `)
 }
 
-function createBirdFamilies_rel(){
+function createBirdFamilies_rel(){//bird_families table
     return db.query(`
     CREATE TABLE bird_families (
         family_id SERIAL PRIMARY KEY,
@@ -35,7 +38,7 @@ function createBirdFamilies_rel(){
     `)
 }
 
-function createBirds_rel(){
+function createBirds_rel(){ //birds table
     return db.query(`
     CREATE TABLE birds (
         bird_id SERIAL PRIMARY KEY,
@@ -54,13 +57,13 @@ function createBirds_rel(){
     `)
 }
 
-function createrookeryTour_rel(){
+function createrookeryTour_rel(){//rookery_tour table
     return db.query(`
     CREATE TABLE rookery_tour (
         rtour_id SERIAL PRIMARY KEY,
         tour_name VARCHAR (50) UNIQUE NOT NULL
         tour_type VARCHAR (13) NOT NULL,
-        length: INT,
+        length_minutes: INT,
         location VARCHAR (40),
         cost_pennies: BIGINT,
         date: timestampz,
@@ -68,7 +71,7 @@ function createrookeryTour_rel(){
     `)
 }
 
-function createbirdWatchers_rel(){
+function createbirdWatchers_rel(){//birdwatchers table
     return db.query(`
     CREATE TABLE birdwatchers (
         bw_id SERIAL PRIMARY KEY,
@@ -81,7 +84,7 @@ function createbirdWatchers_rel(){
     `)
 }
 
-function createwatcherTours_rel(){
+function createwatcherTours_rel(){ //watchers_tours table
     return db.query(`
     CREATE TABLE watchers_tours(
         watcher_tour_id SERIAL PRIMARY KEY,
@@ -90,4 +93,110 @@ function createwatcherTours_rel(){
     )
     `)
 }
+
+//Creating insertion functions
+
+function insertIntoW_shapetbl(rawdata){//insert into wings_shape
+    const formattedData = parseObjToNestedArr(rawdata)
+    const queryStr = format(
+        `INSERT INTO wing_shape
+         (shape_name,w_description,image)
+         VALUES
+            %L
+        RETURNING *;
+        `,formattedData
+    )
+   return db.query(queryStr)
+}
+
+
+
+function insertIntoB_orderstbl(rawdata){//insert into bird_orders
+    const swapOut = addWIdToOrders(rawdata,createWingsRef)
+    const formattedData = parseObjToNestedArr(swapOut)
+    const queryStr = format(
+        `INSERT INTO bird_orders
+         (o_scientific_name,order_image,shape_id,o_description)
+         VALUES
+            %L
+        RETURNING *;
+        `,formattedData
+    )
+   return db.query(queryStr)
+}
+
+
+
+function insertIntoB_familiestbl(rawdata){//insert into bird_families
+    const swapOut = addOIdToFamilies(rawdata,createOrdersRef)
+    const formattedData = parseObjToNestedArr(swapOut)
+    const queryStr = format(
+        `INSERT INTO bird_families
+         (scientific_fam_name,f_description,clutch_size,habitats,predators,o_id)
+         VALUES
+            %L
+        RETURNING *;
+        `,formattedData
+    )
+   return db.query(queryStr)
+}
+
+
+function insertIntobirdstbl(rawdata){//insert into birds
+    const swapOut = addFIdToBirds(rawdata,createFamiliesRef)
+    const formattedData = parseObjToNestedArr(swapOut)
+    const queryStr = format(
+        `INSERT INTO birds
+         (common_name ,species_name,wing_colour,can_Fly,length_cm,weight_g,lay_season,f_id,fun_fact,wingspan_cm)
+         VALUES
+            %L
+        RETURNING *;
+        `,formattedData
+    )
+   return db.query(queryStr)
+}
+
+
+function insertIntoBirdWatcherstbl(rawdata){//insert into birdwatchers
+    const formattedData = parseObjToNestedArr(rawdata)
+    const queryStr = format(
+        `INSERT INTO birdwatchers
+         (formal_title,first_name,last_name,age,email_address)
+         VALUES
+            %L
+        RETURNING *;
+        `,formattedData
+    )
+   return db.query(queryStr)
+}
+
+function insertIntoRookeryTourtbl(rawdata){//insert into rookery_tour
+    const formattedData = parseObjToNestedArr(rawdata)
+    const queryStr = format(
+        `INSERT INTO rookery_tour
+         (tour_name,tour_type,length_minutes,location,cost_pennies,date)
+         VALUES
+            %L
+        RETURNING *;
+        `,formattedData
+    )
+   return db.query(queryStr)
+}
+
+
+function insertIntoWatcherTourstbl(rawdata){//insert into watchers_tours
+        const formattedData = parseObjToNestedArr(rawdata)
+        const queryStr = format(
+            `INSERT INTO watchers_tours
+             (tour_id, watcher_id)
+             VALUES
+                %L
+            RETURNING *;
+            `,formattedData
+        )
+       return db.query(queryStr)
+}
+
+module.exports = {createWingsShape_rel,createBirdOrders_rel,createBirdFamilies_rel,createBirds_rel,createrookeryTour_rel,createbirdWatchers_rel,createwatcherTours_rel,insertIntoW_shapetbl,insertIntoB_orderstbl,insertIntoB_familiestbl,insertIntobirdstbl,insertIntoBirdWatcherstbl,insertIntoRookeryTourtbl,insertIntoWatcherTourstbl}
+
 

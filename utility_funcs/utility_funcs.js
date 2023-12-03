@@ -32,6 +32,9 @@ function createFamiliesRef(familyData){//for birds
     return familyLookup
 }
 
+
+
+
 function addWIdToOrders(orderData,wingsLookup){//switch out shape in bird_orders
   const newOrdersArray = orderData.map((order)=>{
     const orderCpy = {...order}
@@ -53,7 +56,7 @@ function addOIdToFamilies(familyData,orderLookup){//switch out order in bird_fam
   return newFamiliesArray
 }
 
-function addFIdToFamilies(birdsData,familyLookup){//switch out family in birds for f_id
+function addFIdToBirds(birdsData,familyLookup){//switch out family in birds for f_id
   const newBirdsArray =birdsData.map((bird)=>{
     const birdsCpy = {...bird}
     birdsCpy.f_id = familyLookup[birdsCpy.family]
@@ -62,3 +65,5 @@ function addFIdToFamilies(birdsData,familyLookup){//switch out family in birds f
   })
   return newBirdsArray
 }
+
+module.exports = {parseObjToNestedArr,createWingsRef,createOrdersRef,createFamiliesRef,addWIdToOrders,addOIdToFamilies,addFIdToBirds}

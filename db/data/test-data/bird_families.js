@@ -11,7 +11,7 @@ bird_familesTD = [
     },
     {
         scientific_fam_name: "Strigidae",
-        f_description: "This is a large family that includes the True Owl found on all continents except Antarctica. 95% are forest-dwelling but most are non-migratory with rest migrating depending on the seasons. These owls have large heads, elongated eyes and a short hooked bill that point downwards. Mnay species have ear tufts that are suggested to be for behavioural functions. They have talons that are sharp and hooked and with a reversible fourth toes (zygodactyly). Like most owls they hunt in low-light conditions. When confronted with danger they will crouch down, lower their heads, dropp their wings and ruffle their feathers.",
+        f_description: "This is a large family that includes the True Owl found on all continents except Antarctica. 95% are forest-dwelling but most are non-migratory with rest migrating depending on the seasons. These owls have large heads, elongated eyes and a short hooked bill that point downwards. Many species have ear tufts that are suggested to be for behavioural functions. They have talons that are sharp and hooked and with a reversible fourth toes (zygodactyly). Like most owls they hunt in low-light conditions. When confronted with danger they will crouch down, lower their heads, dropp their wings and ruffle their feathers.",
         clutch_size : '[3,4]',
         habitats: ["forests","tundras","deserts"],
         predators:["none"],
@@ -19,7 +19,7 @@ bird_familesTD = [
     },
     {
         scientific_fam_name: "Spheniscidae",
-        f_description: "These are the the aquatic flightless birds that almost exclusively are found on the Southern hemisphere, with only the Galapagos Penguin being north of the equator. These penguins have countershaded white undersides and dark black dorsal plumage. Half of their lives are spent in oceans and the other half is spent on land. FOr the most part they tend to breed in large colonies and form monogamous pairs int he breeding season. Young penguins with grey-white down sometimes assemble in groups to keep warm called crèches. When a mother loses a chick (due to hypothermia, predators etc) they may attempt to steal chicks from other mothers.Overall they tend to be large birds weighing 40kg or more.",
+        f_description: "These are the the aquatic flightless birds that almost exclusively are found on the Southern hemisphere, with only the Galapagos Penguin being north of the equator. These penguins have countershaded white undersides and dark black dorsal plumage. Half of their lives are spent in oceans and the other half is spent on land. For the most part they tend to breed in large colonies and form monogamous pairs int the breeding season. Young penguins with grey-white down sometimes assemble in groups to keep warm called crèches. When a mother loses a chick (due to hypothermia, predators etc) they may attempt to steal chicks from other mothers.Overall they tend to be large birds weighing 40kg or more.",
         clutch_size : '[1,3]',
         habitats: ["oceans","coasts"],
         predators: ["skuas","petrels", "killer whales","sea lions"],
