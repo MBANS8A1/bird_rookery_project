@@ -1,7 +1,7 @@
 //6 families
 //Mesitornithidae,Strigidae,Spheniscidae,Passeridae,Phasianidae,Cuculidae ids(1-9)
 
-module.exports = [
+birdsTD = [
 
     {
         common_name: "Brown mesite",
@@ -163,3 +163,5 @@ module.exports = [
         wingspan_cm: 47,
       }
 ]
+
+module.exports = birdsTD

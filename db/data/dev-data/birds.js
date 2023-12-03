@@ -15,7 +15,7 @@ family, INT
 fun_factTEXT
 order
 */
-module.exports = [
+birdsD = [
   {
     common_name: "Feral pigeon",
     species_name: "Columba livia domestica",

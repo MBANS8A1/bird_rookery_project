@@ -1,5 +1,5 @@
 
-module.exports = [
+bird_orderD = [
     {
         o_scientific_name : "Columbiformes",
         order_image: '../../../bird_images/bird_order_pics/columbiformes.jpg', //done

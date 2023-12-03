@@ -1,4 +1,4 @@
-module.exports = [
+bird_familyD = [
     {
         scientific_fam_name: "Columbidae",
         f_description: "They are known crop pests and in urbunareas they nest on man-made structues and their droppings tend to be a nuisance. Tend to be granivorous and frugivorous",

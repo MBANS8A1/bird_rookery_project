@@ -1,4 +1,4 @@
-module.exports = [
+birdwatchersD = [
   {formal_title: "Mr",
    first_name: "James",
    last_name: "Sunderland",

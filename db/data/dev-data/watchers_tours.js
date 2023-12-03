@@ -5,7 +5,7 @@ watcher_id INT REFERENCES rookery_tour(bwatcher_id)
 */
 //should be records here
 //remember that there are more birdwatchers than tours
-module.exports =[
+watchers_toursD =[
     {
         watcher_id : 1,
         tour_id: 2

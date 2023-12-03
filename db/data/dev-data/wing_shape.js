@@ -1,5 +1,5 @@
 //shape_d will be here (have to create this table after order and family and then after this table create birds)
-module.exports = [
+wing_shapesD = [
 
     {
         shape_name:"Passive soaring wings",

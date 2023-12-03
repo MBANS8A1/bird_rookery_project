@@ -1,6 +1,6 @@
 //birdwatchers ids: 1,7,23,26,24,9
 
-module.exports = [
+watchers_toursTD = [
     {
         watcher_id : 1,
         tour_id: 3
@@ -72,3 +72,5 @@ module.exports = [
 
     }
 ]
+
+module.exports = watchers_toursTD

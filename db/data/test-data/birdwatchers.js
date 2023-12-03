@@ -1,4 +1,4 @@
-module.exports = [
+birdwatchersTD = [
   {formal_title: "Mr",
    first_name: "Samuel",
    last_name: "Okolo",
@@ -40,3 +40,5 @@ module.exports = [
   email_address: "l_falconies@outlook.com"
   }//9 -> now id6
 ]
+
+module.exports = birdwatchersTD

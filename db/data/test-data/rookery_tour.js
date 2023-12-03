@@ -1,5 +1,5 @@
 //birdwatchers ids: 3,7,23,26,24,9
-module.exports =[
+rookeryTourTD =[
     {
         tour_name :"Hallerbos Forest Trek",
         tour_type :"Entertainment",
@@ -90,3 +90,4 @@ module.exports =[
         date: '2024-06-12 17:30:00-6'//17 -> now id11
     }
 ]
+module.exports = rookeryTourTD

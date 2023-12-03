@@ -10,7 +10,7 @@ cost_pounds BIGINT
 date timestamptz
  */
 
-module.exports = [
+rookeryTourD = [
     {
         tour_name :"Frigid Shenanigans",
         tour_type :"Entertainment",

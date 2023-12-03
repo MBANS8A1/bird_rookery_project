@@ -1,6 +1,6 @@
 //6 families
 //Mesitornithidae,Strigidae,Spheniscidae,Passeridae,Phasianidae,Cuculidae (ids 1-6)
-module.exports = [
+bird_orderTD = [
     {
         o_scientific_name : "Mesitornithiformes",
         order_image: '../../../bird_images/bird_order_pics/Mesitornithiformes.jpeg',
@@ -39,3 +39,5 @@ module.exports = [
     },
 
 ]
+
+module.exports = bird_orderTD
