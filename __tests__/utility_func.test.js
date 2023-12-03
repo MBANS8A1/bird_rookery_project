@@ -4,8 +4,7 @@ const testData_ws = require('../db/data/test-data/wing_shape.js')
 //const testData_birds = require('../db/data/test-data/birds.js')
 
 
-
-const{parseObjToNestedArr,createWingsRef,createOrdersRef,createFamiliesRef,addWIdToOrders,addOIdToFamilies,addFIdToFamilies} = require('../utility_funcs/utility_funcs.js')
+const{parseObjToNestedArr,createWingsRef,createOrdersRef,createFamiliesRef,addWIdToOrders,addOIdToFamilies,addFIdToBirds} = require('../utility_funcs/utility_funcs.js')
 
 
 describe('formatting test(s) for pg-format',()=>{
@@ -273,7 +272,7 @@ describe('switchout tests for ids provided by the ref functions',()=>{
 
          const result1 = addWIdToOrders(orderDataBlk,makewingsRef)
          const result2 = addOIdToFamilies(familyDataBlk,makeordersRef)
-         const result3 = addFIdToFamilies(birdDataBlk,makeFamiliesRef)
+         const result3 = addFIdToBirds(birdDataBlk,makeFamiliesRef)
 
          expect(result1).toEqual([ {
             o_scientific_name : "Mesitornithiformes",
@@ -439,7 +438,7 @@ describe('switchout tests for ids provided by the ref functions',()=>{
 
         addWIdToOrders(orderDataBlk,makewingsRef)
          addOIdToFamilies(familyDataBlk,makeordersRef)
-         addFIdToFamilies(birdDataBlk,makeFamiliesRef)
+         addFIdToBirds(birdDataBlk,makeFamiliesRef)
 
         expect(orderDataBlk).toEqual(orderDataBlkCl)
         expect(familyDataBlk).toEqual(familyDataBlkCl)
@@ -454,7 +453,7 @@ describe('switchout tests for ids provided by the ref functions',()=>{
 
        const result1 = addWIdToOrders(orderDataBlk,makewingsRef)
        const result2 =  addOIdToFamilies(familyDataBlk,makeordersRef)
-       const result3 = addFIdToFamilies(birdDataBlk,makeFamiliesRef)
+       const result3 = addFIdToBirds(birdDataBlk,makeFamiliesRef)
 
         expect(result1).not.toBe(orderDataBlk)
         expect(result2).not.toBe(familyDataBlk)
