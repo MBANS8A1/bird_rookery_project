@@ -1,6 +1,6 @@
 //birdwatchers ids: 1,7,23,26,24,9
 
-watchers_toursTD = [
+const watchers_toursTD = [
     {
         watcher_id : 1,
         tour_id: 3

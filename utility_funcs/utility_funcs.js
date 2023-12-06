@@ -10,8 +10,10 @@ function parseObjToNestedArr(arrayofObj){
 
  function createWingsRef(wingsData){//for orders
      const wingsLookup = {}
-     wingsData.map((wing)=>{
-      wingsLookup[wing.shape_name ]= wing.wing_id
+     const wingsDataCopy = [...wingsData]
+    const creationLookup = wingsDataCopy.map((wing)=>{
+       const wingCpy = {...wing}
+      wingsLookup[wingCpy.shape_name]= wingCpy.wing_id
      })
      return wingsLookup
  }

@@ -1,4 +1,4 @@
-birdwatchersTD = [
+const birdwatchersTD = [
   {formal_title: "Mr",
    first_name: "Samuel",
    last_name: "Okolo",

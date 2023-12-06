@@ -10,7 +10,7 @@ cost_pounds BIGINT
 date timestamptz
  */
 
-rookeryTourD = [
+const rookeryTourD = [
     {
         tour_name :"Frigid Shenanigans",
         tour_type :"Entertainment",
@@ -174,3 +174,5 @@ rookeryTourD = [
         date: '2024-06-30 04:25:10+10'//20
     }
 ]
+
+module.exports = rookeryTourD

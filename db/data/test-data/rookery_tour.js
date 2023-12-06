@@ -1,5 +1,5 @@
 //birdwatchers ids: 3,7,23,26,24,9
-rookeryTourTD =[
+const rookeryTourTD =[
     {
         tour_name :"Hallerbos Forest Trek",
         tour_type :"Entertainment",

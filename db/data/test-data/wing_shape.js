@@ -1,5 +1,5 @@
 
-wing_shapesTD  =[
+const wing_shapesTD  =[
     {
         shape_name:"Passive soaring wings",
         w_description:"These wings have long broad feathers that are spread out integrated wing slots for warm air to rise through (creating \'thermals\') that help the bird rise even higher in the sky. This mechanism of maintaining altitude helps the bird to conserve energy and circle on any prey spotted.",

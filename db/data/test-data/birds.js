@@ -1,7 +1,7 @@
 //6 families
 //Mesitornithidae,Strigidae,Spheniscidae,Passeridae,Phasianidae,Cuculidae ids(1-9)
 
-birdsTD = [
+const birdsTD = [
 
     {
         common_name: "Brown mesite",

@@ -1,6 +1,6 @@
 //6 families
 //Mesitornithidae,Strigidae,Spheniscidae,Passeridae,Phasianidae,Cuculidae (ids 1-6)
-bird_familesTD = [
+const bird_familesTD = [
     {
         scientific_fam_name: "Mesitornithidae",
         f_description: "These are a family of small near-flightless birds endemic to Madagascar. Every species in this family (white, brown and sub-desert) is threatened. They are vocal birds that produce passerine-like sounds for territorial defence",

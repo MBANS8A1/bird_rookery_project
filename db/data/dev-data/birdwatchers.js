@@ -1,4 +1,4 @@
-birdwatchersD = [
+const birdwatchersD = [
   {formal_title: "Mr",
    first_name: "James",
    last_name: "Sunderland",
@@ -202,3 +202,5 @@ birdwatchersD = [
     email_address: "l_chu@qq.com"
   }]
   //30
+
+  module.exports = birdwatchersD

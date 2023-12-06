@@ -1,21 +1,4 @@
-//dev data only
-//table structure
-/*
-bird_id INT SERIAL PRIMARY KEY,
-b_species VARCHAR (255),
-wing_colour VARCHAR(45),
-diet TEXT ARRAY(25),
-can_Fly Boolean
-length_cm
-height_cm
-average_wingspan_ft: NUMERIC (5,2),
-laying_season VARCHAR (25),
-common_name VARCHAR(50),
-family, INT
-fun_factTEXT
-order
-*/
-birdsD = [
+const birdsD = [
   {
     common_name: "Feral pigeon",
     species_name: "Columba livia domestica",
@@ -1464,3 +1447,5 @@ birdsD = [
     wingspan_cm: 222,
   },
 ];
+
+module.exports = birdsD
