@@ -68,8 +68,8 @@ describe('object lookup creation tests for create referential integrity between 
             scientific_fam_name: "Mesitornithidae",
             f_description: "These are a family of small near-flightless birds endemic to Madagascar. Every species in this family (white, brown and sub-desert) is threatened. They are vocal birds that produce passerine-like sounds for territorial defence",
             clutch_size : 2,
-            habitats: ["dry forests","woodlands"],
-            predators:["reptiles","larger mammals"],
+            no_of_genera: 2,
+            no_of_species: 3,
             order:"Mesitornithiformes"
         },
         {
@@ -77,8 +77,8 @@ describe('object lookup creation tests for create referential integrity between 
             scientific_fam_name: "Strigidae",
             f_description: "This is a large family that includes the True Owl found on all continents except Antarctica. 95% are forest-dwelling but most are non-migratory with rest migrating depending on the seasons. These owls have large heads, elongated eyes and a short hooked bill that point downwards. Many species have ear tufts that are suggested to be for behavioural functions. They have talons that are sharp and hooked and with a reversible fourth toes (zygodactyly). Like most owls they hunt in low-light conditions. When confronted with danger they will crouch down, lower their heads, dropp their wings and ruffle their feathers.",
             clutch_size : 3,
-            habitats: ["forests","tundras","deserts"],
-            predators:["none"],
+            no_of_genera: 28,
+            no_of_species: 194,
             order:"Strigiformes"
         },
     ]
@@ -155,8 +155,8 @@ describe('switchout tests for ids provided by the ref functions',()=>{
             scientific_fam_name: "Mesitornithidae",
             f_description: "These are a family of small near-flightless birds endemic to Madagascar. Every species in this family (white, brown and sub-desert) is threatened. They are vocal birds that produce passerine-like sounds for territorial defence",
             clutch_size : 2,
-            habitats: ["dry forests","woodlands"],
-            predators:["reptiles","larger mammals"],
+            no_of_genera: 2,
+            no_of_species: 3,
             order:"Mesitornithiformes"
         },
         {
@@ -164,8 +164,8 @@ describe('switchout tests for ids provided by the ref functions',()=>{
             scientific_fam_name: "Strigidae",
             f_description: "This is a large family that includes the True Owl found on all continents except Antarctica. 95% are forest-dwelling but most are non-migratory with rest migrating depending on the seasons. These owls have large heads, elongated eyes and a short hooked bill that point downwards. Many species have ear tufts that are suggested to be for behavioural functions. They have talons that are sharp and hooked and with a reversible fourth toes (zygodactyly). Like most owls they hunt in low-light conditions. When confronted with danger they will crouch down, lower their heads, dropp their wings and ruffle their feathers.",
             clutch_size : 3,
-            habitats: ["forests","tundras","deserts"],
-            predators:["none"],
+            no_of_genera: 28,
+            no_of_species: 194,
             order:"Strigiformes"
         },
     ]
@@ -207,16 +207,16 @@ describe('switchout tests for ids provided by the ref functions',()=>{
             scientific_fam_name: "Mesitornithidae",
             f_description: "These are a family of small near-flightless birds endemic to Madagascar. Every species in this family (white, brown and sub-desert) is threatened. They are vocal birds that produce passerine-like sounds for territorial defence",
             clutch_size : 2,
-            habitats: ["dry forests","woodlands"],
-            predators:["reptiles","larger mammals"],
+            no_of_genera: 2,
+            no_of_species: 3,
             order:"Mesitornithiformes"
         },
         {
             scientific_fam_name: "Strigidae",
             f_description: "This is a large family that includes the True Owl found on all continents except Antarctica. 95% are forest-dwelling but most are non-migratory with rest migrating depending on the seasons. These owls have large heads, elongated eyes and a short hooked bill that point downwards. Many species have ear tufts that are suggested to be for behavioural functions. They have talons that are sharp and hooked and with a reversible fourth toes (zygodactyly). Like most owls they hunt in low-light conditions. When confronted with danger they will crouch down, lower their heads, dropp their wings and ruffle their feathers.",
             clutch_size : 3,
-            habitats: ["forests","tundras","deserts"],
-            predators:["none"],
+            no_of_genera: 28,
+            no_of_species: 194,
             order:"Strigiformes"
         },
     ]
@@ -226,7 +226,7 @@ describe('switchout tests for ids provided by the ref functions',()=>{
             common_name: "Brown mesite",
             species_name: " Mesitornis unicolor",
             wing_colour: "reddish-brown",
-            diet: ["insects", "spiders", "molluscs"],
+            diet: "insectivorous/molluscivorous",
             can_Fly: true,
             length_cm: 30,
             weight_g: 148,
@@ -241,16 +241,7 @@ describe('switchout tests for ids provided by the ref functions',()=>{
             common_name: "Great horned owl",
             species_name: "Bubo virginianus",
             wing_colour: "mottled brown with black bars/markings",
-            diet: [
-              "smaller-birds",
-              "fish",
-              "amphibians",
-              "insects",
-              "scorpions",
-              "crustaceans",
-              "carrion",
-              "small-mammals",
-            ],
+            diet:  "carnivorous",
             can_Fly: true,
             length_cm: 64,
             weight_g: 1400,
@@ -294,16 +285,16 @@ describe('switchout tests for ids provided by the ref functions',()=>{
                 scientific_fam_name: "Mesitornithidae",
                 f_description: "These are a family of small near-flightless birds endemic to Madagascar. Every species in this family (white, brown and sub-desert) is threatened. They are vocal birds that produce passerine-like sounds for territorial defence",
                 clutch_size : 2,
-                habitats: ["dry forests","woodlands"],
-                predators:["reptiles","larger mammals"],
+                no_of_genera: 2,
+                no_of_species: 3,
                 o_id:1
             },
             {
                 scientific_fam_name: "Strigidae",
                 f_description: "This is a large family that includes the True Owl found on all continents except Antarctica. 95% are forest-dwelling but most are non-migratory with rest migrating depending on the seasons. These owls have large heads, elongated eyes and a short hooked bill that point downwards. Many species have ear tufts that are suggested to be for behavioural functions. They have talons that are sharp and hooked and with a reversible fourth toes (zygodactyly). Like most owls they hunt in low-light conditions. When confronted with danger they will crouch down, lower their heads, dropp their wings and ruffle their feathers.",
                 clutch_size : 3,
-                habitats: ["forests","tundras","deserts"],
-                predators:["none"],
+                no_of_genera: 28,
+                no_of_species: 194,
                 o_id:2
             }
 
@@ -314,7 +305,7 @@ describe('switchout tests for ids provided by the ref functions',()=>{
                     common_name: "Brown mesite",
                     species_name: " Mesitornis unicolor",
                     wing_colour: "reddish-brown",
-                    diet: ["insects", "spiders", "molluscs"],
+                    diet: "insectivorous/molluscivorous",
                     can_Fly: true,
                     length_cm: 30,
                     weight_g: 148,
@@ -329,16 +320,7 @@ describe('switchout tests for ids provided by the ref functions',()=>{
                     common_name: "Great horned owl",
                     species_name: "Bubo virginianus",
                     wing_colour: "mottled brown with black bars/markings",
-                    diet: [
-                      "smaller-birds",
-                      "fish",
-                      "amphibians",
-                      "insects",
-                      "scorpions",
-                      "crustaceans",
-                      "carrion",
-                      "small-mammals",
-                    ],
+                    diet: "carnivorous",
                     can_Fly: true,
                     length_cm: 64,
                     weight_g: 1400,
@@ -377,16 +359,16 @@ describe('switchout tests for ids provided by the ref functions',()=>{
                 scientific_fam_name: "Mesitornithidae",
                 f_description: "These are a family of small near-flightless birds endemic to Madagascar. Every species in this family (white, brown and sub-desert) is threatened. They are vocal birds that produce passerine-like sounds for territorial defence",
                 clutch_size : 2,
-                habitats: ["dry forests","woodlands"],
-                predators:["reptiles","larger mammals"],
+                no_of_genera: 2,
+                no_of_species: 3,
                 order:"Mesitornithiformes"
             },
             {
                 scientific_fam_name: "Strigidae",
                 f_description: "This is a large family that includes the True Owl found on all continents except Antarctica. 95% are forest-dwelling but most are non-migratory with rest migrating depending on the seasons. These owls have large heads, elongated eyes and a short hooked bill that point downwards. Many species have ear tufts that are suggested to be for behavioural functions. They have talons that are sharp and hooked and with a reversible fourth toes (zygodactyly). Like most owls they hunt in low-light conditions. When confronted with danger they will crouch down, lower their heads, dropp their wings and ruffle their feathers.",
                 clutch_size : 3,
-                habitats: ["forests","tundras","deserts"],
-                predators:["none"],
+                no_of_genera: 28,
+                no_of_species: 194,
                 order:"Strigiformes"
             },
         ]
@@ -395,7 +377,7 @@ describe('switchout tests for ids provided by the ref functions',()=>{
                 common_name: "Brown mesite",
                 species_name: " Mesitornis unicolor",
                 wing_colour: "reddish-brown",
-                diet: ["insects", "spiders", "molluscs"],
+                diet: "insectivorous/molluscivorous",
                 can_Fly: true,
                 length_cm: 30,
                 weight_g: 148,
@@ -410,16 +392,7 @@ describe('switchout tests for ids provided by the ref functions',()=>{
                 common_name: "Great horned owl",
                 species_name: "Bubo virginianus",
                 wing_colour: "mottled brown with black bars/markings",
-                diet: [
-                  "smaller-birds",
-                  "fish",
-                  "amphibians",
-                  "insects",
-                  "scorpions",
-                  "crustaceans",
-                  "carrion",
-                  "small-mammals",
-                ],
+                diet: "carnivorous",
                 can_Fly: true,
                 length_cm: 64,
                 weight_g: 1400,

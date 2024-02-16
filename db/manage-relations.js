@@ -33,8 +33,8 @@ function createBirdFamilies_rel(){//bird_families table
         scientific_fam_name VARCHAR(55) UNIQUE NOT NULL,
         f_description TEXT,
         clutch_size INT, 
-        habitats text ARRAY,
-        predators text ARRAY,
+        no_of_genera INT,
+        no_of_species INT,
         o_id INT REFERENCES bird_orders(order_id)
     )
     `)
@@ -47,7 +47,7 @@ function createBirds_rel(){ //birds table
         common_name VARCHAR(50) UNIQUE NOT NULL,
         species_name VARCHAR(70) UNIQUE NOT NULL,
         wing_colour VARCHAR(25) NOT NULL,
-        diet text ARRAY,
+        diet VARCHAR(60),
         can_Fly BOOLEAN NOT NULL,
         length_cm INT,
         weight_g INT,
