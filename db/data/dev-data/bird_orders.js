@@ -11,7 +11,7 @@ const bird_orderD = [
     order_image: "../../../bird_images/bird_order_pics/coraciiformes.jpeg", //done
     shape: "Hovering wings",
     o_description:
-      "Have large bills with unique casques; they feed on insects. Contains 7 families are some notable names are kingfishers, rollers, bee-eaters, motmots and todies" //2
+      "Have large bills with unique casques; they feed on insects. Contains 7 families are some notable names are kingfishers, rollers, bee-eaters, motmots and todies." //2
   },
   {
     o_scientific_name: "Eurypygiformes",
@@ -32,7 +32,7 @@ const bird_orderD = [
     order_image: "../../../bird_images/bird_order_pics/Coliiformes.jpg", //done
     shape: "Elliptical wings",
     o_description:
-      "There is 1 family in this order, which includes six species of mousebirds. Theya re found in sub-Saharan Africa. THey are grey birds with long thin tails, stubby bills and crests on their heads. Their name comes from the fact that when the move along the ground they do so like mice. All the mousebirds are herbivores" //5
+      "There is 1 family in this order, which includes six species of mousebirds. Theya re found in sub-Saharan Africa. THey are grey birds with long thin tails, stubby bills and crests on their heads. Their name comes from the fact that when the move along the ground they do so like mice. All the mousebirds are herbivores." //5
   },
   {
     o_scientific_name: "Cuculiformes",

@@ -26,10 +26,10 @@ const seeder = ({wing_shapeData}) =>{
         return createWingsShape_rel()
       })
       .then(()=>{
-          return createBirdOrders_rel()
+        return createBirdOrders_rel()
       })
       .then(()=>{
-          return createBirdFamilies_rel()
+        return createBirdFamilies_rel()
       })
       .then(()=>{
         return createBirds_rel()
@@ -52,6 +52,12 @@ const seeder = ({wing_shapeData}) =>{
             //console.log(swappedData)
             return insertIntoB_orderstbl(swappedData)
             //Whoopee works now!!
+      }).then(({rows})=>{
+            const ref = createOrdersRef(rows)
+            const swappedData = addOIdToFamilies(birdsFamiliesData,ref)
+            return insertIntoB_familiestbl(swappedData)
+      }).catch((err)=>{
+         console.log(err)
       })
 }
 
@@ -74,29 +80,28 @@ function insertIntoW_shapetbl(rawdata){//insert into wings_shape
 
 function insertIntoB_orderstbl(swappedData){//insert into bird_orders
     const formattedData = parseObjToNestedArr(swappedData)
-    const queryStr = format(`
-         INSERT INTO bird_orders
+    const queryStr = format(
+       `INSERT INTO bird_orders
          (o_scientific_name,order_image,o_description,shape_id)
          VALUES
             %L
-        RETURNING *;
-        `,formattedData
+         RETURNING *;
+         `,formattedData
     )
    return db.query(queryStr)
 }
 
 
 
-function insertIntoB_familiestbl(rawdata,ordersRef){//insert into bird_families
-    const swapOut = addOIdToFamilies(rawdata,ordersRef)
-    const formattedData = parseObjToNestedArr(swapOut)
-    const queryStr = format(
-        `INSERT INTO bird_families
+function insertIntoB_familiestbl(swappedData){//insert into bird_families
+    const formattedData = parseObjToNestedArr(swappedData)
+    const queryStr = format(`
+         INSERT INTO bird_families
          (scientific_fam_name,f_description,clutch_size,habitats,predators,o_id)
          VALUES
-            %L
-        RETURNING *;
-        `,formattedData
+            %L,%L,%L,ARRAY[%L],ARRAY[%L],%L
+         RETURNING *;
+         `,formattedData
     )
    return db.query(queryStr)
 }

@@ -67,7 +67,7 @@ describe('object lookup creation tests for create referential integrity between 
             family_id : 1,
             scientific_fam_name: "Mesitornithidae",
             f_description: "These are a family of small near-flightless birds endemic to Madagascar. Every species in this family (white, brown and sub-desert) is threatened. They are vocal birds that produce passerine-like sounds for territorial defence",
-            clutch_size : '[2,3]',
+            clutch_size : 2,
             habitats: ["dry forests","woodlands"],
             predators:["reptiles","larger mammals"],
             order:"Mesitornithiformes"
@@ -76,7 +76,7 @@ describe('object lookup creation tests for create referential integrity between 
             family_id : 2,
             scientific_fam_name: "Strigidae",
             f_description: "This is a large family that includes the True Owl found on all continents except Antarctica. 95% are forest-dwelling but most are non-migratory with rest migrating depending on the seasons. These owls have large heads, elongated eyes and a short hooked bill that point downwards. Many species have ear tufts that are suggested to be for behavioural functions. They have talons that are sharp and hooked and with a reversible fourth toes (zygodactyly). Like most owls they hunt in low-light conditions. When confronted with danger they will crouch down, lower their heads, dropp their wings and ruffle their feathers.",
-            clutch_size : '[3,4]',
+            clutch_size : 3,
             habitats: ["forests","tundras","deserts"],
             predators:["none"],
             order:"Strigiformes"
@@ -154,7 +154,7 @@ describe('switchout tests for ids provided by the ref functions',()=>{
             family_id : 1,
             scientific_fam_name: "Mesitornithidae",
             f_description: "These are a family of small near-flightless birds endemic to Madagascar. Every species in this family (white, brown and sub-desert) is threatened. They are vocal birds that produce passerine-like sounds for territorial defence",
-            clutch_size : '[2,3]',
+            clutch_size : 2,
             habitats: ["dry forests","woodlands"],
             predators:["reptiles","larger mammals"],
             order:"Mesitornithiformes"
@@ -163,7 +163,7 @@ describe('switchout tests for ids provided by the ref functions',()=>{
             family_id : 2,
             scientific_fam_name: "Strigidae",
             f_description: "This is a large family that includes the True Owl found on all continents except Antarctica. 95% are forest-dwelling but most are non-migratory with rest migrating depending on the seasons. These owls have large heads, elongated eyes and a short hooked bill that point downwards. Many species have ear tufts that are suggested to be for behavioural functions. They have talons that are sharp and hooked and with a reversible fourth toes (zygodactyly). Like most owls they hunt in low-light conditions. When confronted with danger they will crouch down, lower their heads, dropp their wings and ruffle their feathers.",
-            clutch_size : '[3,4]',
+            clutch_size : 3,
             habitats: ["forests","tundras","deserts"],
             predators:["none"],
             order:"Strigiformes"
@@ -206,7 +206,7 @@ describe('switchout tests for ids provided by the ref functions',()=>{
         {
             scientific_fam_name: "Mesitornithidae",
             f_description: "These are a family of small near-flightless birds endemic to Madagascar. Every species in this family (white, brown and sub-desert) is threatened. They are vocal birds that produce passerine-like sounds for territorial defence",
-            clutch_size : '[2,3]',
+            clutch_size : 2,
             habitats: ["dry forests","woodlands"],
             predators:["reptiles","larger mammals"],
             order:"Mesitornithiformes"
@@ -214,7 +214,7 @@ describe('switchout tests for ids provided by the ref functions',()=>{
         {
             scientific_fam_name: "Strigidae",
             f_description: "This is a large family that includes the True Owl found on all continents except Antarctica. 95% are forest-dwelling but most are non-migratory with rest migrating depending on the seasons. These owls have large heads, elongated eyes and a short hooked bill that point downwards. Many species have ear tufts that are suggested to be for behavioural functions. They have talons that are sharp and hooked and with a reversible fourth toes (zygodactyly). Like most owls they hunt in low-light conditions. When confronted with danger they will crouch down, lower their heads, dropp their wings and ruffle their feathers.",
-            clutch_size : '[3,4]',
+            clutch_size : 3,
             habitats: ["forests","tundras","deserts"],
             predators:["none"],
             order:"Strigiformes"
@@ -293,7 +293,7 @@ describe('switchout tests for ids provided by the ref functions',()=>{
             {
                 scientific_fam_name: "Mesitornithidae",
                 f_description: "These are a family of small near-flightless birds endemic to Madagascar. Every species in this family (white, brown and sub-desert) is threatened. They are vocal birds that produce passerine-like sounds for territorial defence",
-                clutch_size : '[2,3]',
+                clutch_size : 2,
                 habitats: ["dry forests","woodlands"],
                 predators:["reptiles","larger mammals"],
                 o_id:1
@@ -301,7 +301,7 @@ describe('switchout tests for ids provided by the ref functions',()=>{
             {
                 scientific_fam_name: "Strigidae",
                 f_description: "This is a large family that includes the True Owl found on all continents except Antarctica. 95% are forest-dwelling but most are non-migratory with rest migrating depending on the seasons. These owls have large heads, elongated eyes and a short hooked bill that point downwards. Many species have ear tufts that are suggested to be for behavioural functions. They have talons that are sharp and hooked and with a reversible fourth toes (zygodactyly). Like most owls they hunt in low-light conditions. When confronted with danger they will crouch down, lower their heads, dropp their wings and ruffle their feathers.",
-                clutch_size : '[3,4]',
+                clutch_size : 3,
                 habitats: ["forests","tundras","deserts"],
                 predators:["none"],
                 o_id:2
@@ -376,7 +376,7 @@ describe('switchout tests for ids provided by the ref functions',()=>{
             {
                 scientific_fam_name: "Mesitornithidae",
                 f_description: "These are a family of small near-flightless birds endemic to Madagascar. Every species in this family (white, brown and sub-desert) is threatened. They are vocal birds that produce passerine-like sounds for territorial defence",
-                clutch_size : '[2,3]',
+                clutch_size : 2,
                 habitats: ["dry forests","woodlands"],
                 predators:["reptiles","larger mammals"],
                 order:"Mesitornithiformes"
@@ -384,7 +384,7 @@ describe('switchout tests for ids provided by the ref functions',()=>{
             {
                 scientific_fam_name: "Strigidae",
                 f_description: "This is a large family that includes the True Owl found on all continents except Antarctica. 95% are forest-dwelling but most are non-migratory with rest migrating depending on the seasons. These owls have large heads, elongated eyes and a short hooked bill that point downwards. Many species have ear tufts that are suggested to be for behavioural functions. They have talons that are sharp and hooked and with a reversible fourth toes (zygodactyly). Like most owls they hunt in low-light conditions. When confronted with danger they will crouch down, lower their heads, dropp their wings and ruffle their feathers.",
-                clutch_size : '[3,4]',
+                clutch_size : 3,
                 habitats: ["forests","tundras","deserts"],
                 predators:["none"],
                 order:"Strigiformes"

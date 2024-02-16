@@ -32,7 +32,7 @@ function createBirdFamilies_rel(){//bird_families table
         family_id SERIAL PRIMARY KEY,
         scientific_fam_name VARCHAR(55) UNIQUE NOT NULL,
         f_description TEXT,
-        clutch_size int4range, 
+        clutch_size INT, 
         habitats text ARRAY,
         predators text ARRAY,
         o_id INT REFERENCES bird_orders(order_id)
