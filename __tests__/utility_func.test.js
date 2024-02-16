@@ -80,7 +80,7 @@ describe('object lookup creation tests for create referential integrity between 
             no_of_genera: 28,
             no_of_species: 194,
             order:"Strigiformes"
-        },
+        }
     ]
 
     const orderArray = [
@@ -97,7 +97,7 @@ describe('object lookup creation tests for create referential integrity between 
             order_image : '../../../bird_images/bird_order_pics/Strigiformes.jpg',
             shape:"Passive soaring wings",
             o_description : "These are approximately 200 species of owls in this order. They have distinctive camouflage that helps them hide from their prey. Many species have feathered legs and feet. The make vocalizations from  soft hoots to screeching calls. Most have the ability to swivel their heads at least 270 degrees."
-        },
+        }
     ]
     test('The lookup creation functions should return an object with the name followed by the unique id',()=>{
         const result1 = createWingsRef(wingArray)
@@ -167,7 +167,7 @@ describe('switchout tests for ids provided by the ref functions',()=>{
             no_of_genera: 28,
             no_of_species: 194,
             order:"Strigiformes"
-        },
+        }
     ]
 
     const orderArray1 = [
@@ -184,7 +184,7 @@ describe('switchout tests for ids provided by the ref functions',()=>{
             order_image : '../../../bird_images/bird_order_pics/Strigiformes.jpg',
             shape:"Passive soaring wings",
             o_description : "These are approximately 200 species of owls in this order. They have distinctive camouflage that helps them hide from their prey. Many species have feathered legs and feet. The make vocalizations from  soft hoots to screeching calls. Most have the ability to swivel their heads at least 270 degrees."
-        },
+        }
     ]
 
     const orderDataBlk = [
@@ -218,7 +218,7 @@ describe('switchout tests for ids provided by the ref functions',()=>{
             no_of_genera: 28,
             no_of_species: 194,
             order:"Strigiformes"
-        },
+        }
     ]
 
     const birdDataBlk = [
@@ -227,30 +227,26 @@ describe('switchout tests for ids provided by the ref functions',()=>{
             species_name: " Mesitornis unicolor",
             wing_colour: "reddish-brown",
             diet: "insectivorous/molluscivorous",
-            can_Fly: true,
+            can_Fly: "TRUE",
             length_cm: 30,
             weight_g: 148,
             lay_season: "winter",
-            family: "Mesitornithidae",
-            fun_fact:
-              "This is a ground-dwelling bird endemic to Madagascar that is inhabits humid rainforests in the east of the island country",
-        
+            fun_fact:"This is a ground-dwelling bird endemic to Madagascar that is inhabits humid rainforests in the east of the island country.",
             wingspan_cm: 15,
+            family: "Mesitornithidae"
           },
           {
             common_name: "Great horned owl",
             species_name: "Bubo virginianus",
             wing_colour: "mottled brown with black bars/markings",
             diet:  "carnivorous",
-            can_Fly: true,
+            can_Fly: "TRUE",
             length_cm: 64,
             weight_g: 1400,
             lay_season: "spring",
-            family: "Strigidae",
-            fun_fact:
-              'These owl get their name from the two horn-shaped tufts of feathers on either side of their head; this is the owl that makes the characteristic "Hoo HooHoooooo HooHoo" sound that can be heard from miles away. ',
-        
+            fun_fact:'These owl get their name from the two horn-shaped tufts of feathers on either side of their head; this is the owl that makes the characteristic "Hoo HooHoooooo HooHoo" sound that can be heard from miles away. ',
             wingspan_cm: 140,
+            family: "Strigidae"
           }
     ]
 
@@ -306,14 +302,12 @@ describe('switchout tests for ids provided by the ref functions',()=>{
                     species_name: " Mesitornis unicolor",
                     wing_colour: "reddish-brown",
                     diet: "insectivorous/molluscivorous",
-                    can_Fly: true,
+                    can_Fly: TRUE,
                     length_cm: 30,
                     weight_g: 148,
                     lay_season: "winter",
                     f_id: 1,
-                    fun_fact:
-                      "This is a ground-dwelling bird endemic to Madagascar that is inhabits humid rainforests in the east of the island country",
-                
+                    fun_fact:"This is a ground-dwelling bird endemic to Madagascar that is inhabits humid rainforests in the east of the island country",
                     wingspan_cm: 15,
                   },
                   {
@@ -321,7 +315,7 @@ describe('switchout tests for ids provided by the ref functions',()=>{
                     species_name: "Bubo virginianus",
                     wing_colour: "mottled brown with black bars/markings",
                     diet: "carnivorous",
-                    can_Fly: true,
+                    can_Fly: TRUE,
                     length_cm: 64,
                     weight_g: 1400,
                     lay_season: "spring",
@@ -382,11 +376,9 @@ describe('switchout tests for ids provided by the ref functions',()=>{
                 length_cm: 30,
                 weight_g: 148,
                 lay_season: "winter",
-                family: "Mesitornithidae",
-                fun_fact:
-                  "This is a ground-dwelling bird endemic to Madagascar that is inhabits humid rainforests in the east of the island country",
-            
+                fun_fact:"This is a ground-dwelling bird endemic to Madagascar that is inhabits humid rainforests in the east of the island country",
                 wingspan_cm: 15,
+                family: "Mesitornithidae"
               },
               {
                 common_name: "Great horned owl",
@@ -397,11 +389,9 @@ describe('switchout tests for ids provided by the ref functions',()=>{
                 length_cm: 64,
                 weight_g: 1400,
                 lay_season: "spring",
-                family: "Strigidae",
-                fun_fact:
-                  'These owl get their name from the two horn-shaped tufts of feathers on either side of their head; this is the owl that makes the characteristic "Hoo HooHoooooo HooHoo" sound that can be heard from miles away. ',
-            
+                fun_fact:'These owl get their name from the two horn-shaped tufts of feathers on either side of their head; this is the owl that makes the characteristic "Hoo HooHoooooo HooHoo" sound that can be heard from miles away. ',
                 wingspan_cm: 140,
+                family: "Strigidae"
               }
         ]
             

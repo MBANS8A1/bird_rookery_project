@@ -198,7 +198,7 @@ const birdwatchersD = [
     formal_title: "Miss",
     first_name: "Lizi",
     last_name: "Chu",
-    age: 227,
+    age: 22,
     email_address: "l_chu@qq.com"
   }]
   //30

@@ -3,7 +3,6 @@ const rookeryTourTD =[
     {
         tour_name :"Hallerbos Forest Trek",
         tour_type :"Entertainment",
-        bw_id : 2,
         length_minutes: 600,
         location : "Belgium",
         cost_pennies: 170000,

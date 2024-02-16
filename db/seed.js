@@ -3,7 +3,7 @@ const format = require('pg-format')
 const {createWingsShape_rel,createBirdOrders_rel,createBirdFamilies_rel,createBirds_rel,createrookeryTour_rel,createbirdWatchers_rel,createwatcherTours_rel} = require('./manage-relations.js')
 const{parseObjToNestedArr,createWingsRef,createOrdersRef,createFamiliesRef,addWIdToOrders,addOIdToFamilies,addFIdToBirds} = require('../utility_funcs/utility_funcs.js')
 const {birdsData,birdsFamiliesData,birdsOrdersData,birdwatchersData,wing_shapeData,rookeryTourData,watcherTourData} = require('../db/data/dev-data/index.js')
-const seeder = ({wing_shapeData,birdsFamiliesData,birdsData}) =>{
+const seeder = ({wing_shapeData,birdsFamiliesData,birdsData,birdwatchersData,rookeryTourData,watcherTourData}) =>{
       return db.query(`DROP TABLE IF EXISTS birds;`).then(()=>{
          return db.query(`DROP TABLE IF EXISTS bird_families;`)
       })
@@ -42,6 +42,12 @@ const seeder = ({wing_shapeData,birdsFamiliesData,birdsData}) =>{
       })
       .then(()=>{
         return createwatcherTours_rel()
+      }).then(()=>{
+        return insertIntoBirdWatcherstbl(birdwatchersData)
+      }).then(()=>{
+        return insertIntoRookeryTourtbl(rookeryTourData)
+      }).then(()=>{
+         return insertIntoWatcherTourstbl(watcherTourData)
       })
       .then(()=>{
         return insertIntoW_shapetbl(wing_shapeData)
@@ -108,15 +114,14 @@ function insertIntoB_familiestbl(swappedData){//insert into bird_families
 }
 
 
-function insertIntobirdstbl(rawdata,familiesRef){//insert into birds
-    const swapOut = addFIdToBirds(rawdata,familiesRef)
-    const formattedData = parseObjToNestedArr(swapOut)
-    const queryStr = format(
-        `INSERT INTO birds
-         (common_name,species_name,wing_colour,can_Fly,length_cm,weight_g,lay_season,f_id,fun_fact,wingspan_cm)
+function insertIntobirdstbl(swappedData){//insert into birds
+    const formattedData = parseObjToNestedArr(swappedData)
+    const queryStr = format(`
+         INSERT INTO birds
+         (common_name,species_name,wing_colour,diet,can_Fly,length_cm,weight_g,lay_season,fun_fact,wingspan_cm,f_id)
          VALUES
             %L
-        RETURNING *;
+         RETURNING *;
         `,formattedData
     )
    return db.query(queryStr)
@@ -143,7 +148,7 @@ function insertIntoRookeryTourtbl(rawdata){//insert into rookery_tour
          (tour_name,tour_type,length_minutes,location,cost_pennies,date)
          VALUES
             %L
-        RETURNING *;
+         RETURNING *;
         `,formattedData
     )
    return db.query(queryStr)
@@ -151,16 +156,16 @@ function insertIntoRookeryTourtbl(rawdata){//insert into rookery_tour
 
 
 function insertIntoWatcherTourstbl(rawdata){//insert into watchers_tours
-        const formattedData = parseObjToNestedArr(rawdata)
-        const queryStr = format(
-            `INSERT INTO watchers_tours
-             (tour_id,watcher_id)
-             VALUES
-                %L
-            RETURNING *;
-            `,formattedData
+    const formattedData = parseObjToNestedArr(rawdata)
+    const queryStr = format(
+        `INSERT INTO watchers_tours
+         (watcher_id,tour_id)
+         VALUES
+           %L
+         RETURNING *;
+        `,formattedData
         )
-       return db.query(queryStr)
+    return db.query(queryStr)
 }
 
 

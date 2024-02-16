@@ -1,15 +1,3 @@
-/**
- rookery_tour
-tour_id PRIMARY KEY
-tour_name
-type:VARCHAR seasonal/entertainment/
-tour_length INT
-human_id REFERENCES humans(human_id)
-location varchar
-cost_pounds BIGINT
-date timestamptz
- */
-
 const rookeryTourD = [
     {
         tour_name :"Frigid Shenanigans",
@@ -25,7 +13,7 @@ const rookeryTourD = [
         length_minutes: 65,
         location : "Mauritania",
         cost_pennies: 2800000,
-        date: '2024-01-06 12:09:15-0'//2
+        date: '2024-01-06 12:09:15-0'  //2
     },
     {
         tour_name :"Secluded Amazonia",
@@ -46,7 +34,6 @@ const rookeryTourD = [
     {
         tour_name :"Hallerbos Forest Trek",
         tour_type :"Entertainment",
-        bw_id : 2,
         length_minutes: 600,
         location : "Belgium",
         cost_pennies: 170000,
@@ -55,7 +42,6 @@ const rookeryTourD = [
     {
         tour_name :"Plitvice Lake Cruise",
         tour_type :"Entertainment",
-        bw_id : 2,
         length_minutes: 560,
         location : "Croatia",
         cost_pennies: 200075,
@@ -118,20 +104,12 @@ const rookeryTourD = [
         date: '2024-04-17 05:15:30+6'//13
     },
     {
-        tour_name :"Himalayaan subtropical climb",
-        tour_type :"Educational",
-        length_minutes:  1020,
-        location : "Bhutan",
-        cost_pennies: "496600",
-        date: '2024-03-31 05:15:30+6'//14
-    },
-    {
         tour_name :"Taiheiyo montane green pathway",
         tour_type :"Educational",
         length_minutes:  485,
         location : "Japan",
         cost_pennies: "313000",
-        date: '2024-04-29 08:25:00+9'//15
+        date: '2024-04-29 08:25:00+9'//14
     },
     {
         tour_name :"Arkansas rough neckwood",
@@ -139,15 +117,7 @@ const rookeryTourD = [
         length_minutes:  330,
         location : "USA",
         cost_pennies: "255000",
-        date: '2024-06-12 17:30:00-6'//16
-    },
-    {
-        tour_name :"Arkansas rough neckwood",
-        tour_type :"Entertainment",
-        length_minutes:  330,
-        location : "USA",
-        cost_pennies: "255000",
-        date: '2024-06-12 17:30:00-6'//17
+        date: '2024-06-12 17:30:00-6'//15
     },
     {
         tour_name :"White mountain forest creepy incline",
@@ -155,15 +125,15 @@ const rookeryTourD = [
         length_minutes:  "150",
         location : "USA",
         cost_pennies: "146700",
-        date: '2024-07-07 15:10:20-5'//18
+        date: '2024-07-07 15:10:20-5'//16
     },
     {
-        tour_name :"Arctic tundra biting freezr",
+        tour_name :"Arctic tundra biting freeze",
         tour_type :"Educational",
         length_minutes:  "405",
         location : "Russia",
         cost_pennies: "204600",
-        date: '2024-10-22 11:30:00+3'//19
+        date: '2024-10-22 11:30:00+3'//17
     },
     {
         tour_name :"Daintree park funfest",
@@ -171,7 +141,7 @@ const rookeryTourD = [
         length_minutes:  "340",
         location : "Australia",
         cost_pennies: "593419",
-        date: '2024-06-30 04:25:10+10'//20
+        date: '2024-06-30 04:25:10+10'//18
     }
 ]
 

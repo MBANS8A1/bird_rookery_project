@@ -46,13 +46,13 @@ function createBirds_rel(){ //birds table
         bird_id SERIAL PRIMARY KEY,
         common_name VARCHAR(60) UNIQUE NOT NULL,
         species_name VARCHAR(70) UNIQUE NOT NULL,
-        wing_colour VARCHAR(25) NOT NULL,
+        wing_colour VARCHAR(60) NOT NULL,
         diet VARCHAR(60),
         can_Fly BOOLEAN NOT NULL,
         length_cm INT,
         weight_g INT,
         lay_season VARCHAR(50),
-        fun_fact TEXT,
+        fun_fact text,
         wingspan_cm INT,
         f_id INT REFERENCES bird_families(family_id)
     )
@@ -63,8 +63,8 @@ function createrookeryTour_rel(){//rookery_tour table
     return db.query(`
     CREATE TABLE rookery_tour (
         rtour_id SERIAL PRIMARY KEY,
-        tour_name VARCHAR(50) UNIQUE NOT NULL,
-        tour_type VARCHAR(13) NOT NULL,
+        tour_name VARCHAR(70) UNIQUE NOT NULL,
+        tour_type VARCHAR(20) NOT NULL,
         length_minutes INT,
         location VARCHAR(40),
         cost_pennies BIGINT,
@@ -90,9 +90,9 @@ function createwatcherTours_rel(){ //watchers_tours table
     return db.query(`
     CREATE TABLE watchers_tours(
         watcher_tour_id SERIAL PRIMARY KEY,
-        tour_id INT REFERENCES rookery_tour(rtour_id),
-        watcher_id INT REFERENCES birdwatchers(bw_id)
-      )
+        watcher_id INT REFERENCES birdwatchers(bw_id),
+        tour_id INT REFERENCES rookery_tour(rtour_id)
+    )
     `)
 }
 
