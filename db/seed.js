@@ -3,7 +3,7 @@ const format = require('pg-format')
 const {createWingsShape_rel,createBirdOrders_rel,createBirdFamilies_rel,createBirds_rel,createrookeryTour_rel,createbirdWatchers_rel,createwatcherTours_rel} = require('./manage-relations.js')
 const{parseObjToNestedArr,createWingsRef,createOrdersRef,createFamiliesRef,addWIdToOrders,addOIdToFamilies,addFIdToBirds} = require('../utility_funcs/utility_funcs.js')
 const {birdsData,birdsFamiliesData,birdsOrdersData,birdwatchersData,wing_shapeData,rookeryTourData,watcherTourData} = require('../db/data/dev-data/index.js')
-const seeder = ({wing_shapeData}) =>{
+const seeder = ({wing_shapeData,birdsFamiliesData,birdsData}) =>{
       return db.query(`DROP TABLE IF EXISTS birds;`).then(()=>{
          return db.query(`DROP TABLE IF EXISTS bird_families;`)
       })
@@ -56,8 +56,10 @@ const seeder = ({wing_shapeData}) =>{
             const ref = createOrdersRef(rows)
             const swappedData = addOIdToFamilies(birdsFamiliesData,ref)
             return insertIntoB_familiestbl(swappedData)
-      }).catch((err)=>{
-         console.log(err)
+      }).then(({rows})=>{
+            const ref = createFamiliesRef(rows)
+            const swappedData = addFIdToBirds(birdsData,ref)
+            return insertIntobirdstbl(swappedData)
       })
 }
 
@@ -92,14 +94,13 @@ function insertIntoB_orderstbl(swappedData){//insert into bird_orders
 }
 
 
-
 function insertIntoB_familiestbl(swappedData){//insert into bird_families
     const formattedData = parseObjToNestedArr(swappedData)
     const queryStr = format(`
          INSERT INTO bird_families
-         (scientific_fam_name,f_description,clutch_size,habitats,predators,o_id)
+         (scientific_fam_name,f_description,clutch_size,no_of_genera,no_of_species,o_id)
          VALUES
-            %L,%L,%L,ARRAY[%L],ARRAY[%L],%L
+            %L
          RETURNING *;
          `,formattedData
     )

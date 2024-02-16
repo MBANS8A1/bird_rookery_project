@@ -10,8 +10,7 @@ const birdsD = [
     lay_season: "spring/summer",
     family: "Columbidae",
     fun_fact: "Feral pigeon guano contains over 50 known diseases",
-
-    wingspan_cm: 65,
+    wingspan_cm: 65
   },
   {
     common_name: "European Turtle Dove",
@@ -23,10 +22,8 @@ const birdsD = [
     weight_g: 110,
     lay_season: "spring/summer",
     family: "Columbidae",
-    fun_fact:
-      "Smallest native pigeon in England with breeding grounds in southern and Eastern England and wintering grounds in W. Africa",
-
-    wingspan_cm: 48,
+    fun_fact:"Smallest native pigeon in England with breeding grounds in southern and Eastern England and wintering grounds in W. Africa",
+    wingspan_cm: 48
   },
   {
     common_name: "Common Kingfisher",
@@ -38,10 +35,8 @@ const birdsD = [
     weight_g: 31,
     lay_season: "spring",
     family: "Alcedinidae",
-    fun_fact:
-      "Kingfishers inspired Japanese bullet trains and actually don't like each other",
-
-    wingspan_cm: 25,
+    fun_fact:"Kingfishers inspired Japanese bullet trains and actually don't like each other",
+    wingspan_cm: 25
   },
 
   {
@@ -54,10 +49,8 @@ const birdsD = [
     weight_g: 15,
     lay_season: "spring/summer",
     family: "Meropidae",
-    fun_fact:
-      "Have great predator-avoidance behaviour where they won't enter their nest until a predator literally looks away",
-
-    wingspan_cm: 29,
+    fun_fact:"Have great predator-avoidance behaviour where they won't enter their nest until a predator literally looks away",
+    wingspan_cm: 29
   },
   {
     common_name: "Jamaican tody",
@@ -69,10 +62,8 @@ const birdsD = [
     weight_g: 6,
     lay_season: "winter",
     family: "Todidae",
-    fun_fact:
-      "They are easily found in their island and humid-mountain habitats as they move around in pairs",
-
-    wingspan_cm: 5,
+    fun_fact:"They are easily found in their island and humid-mountain habitats as they move around in pairs",
+    wingspan_cm: 5
   },
   {
     common_name: "Sunbittern",
@@ -84,9 +75,7 @@ const birdsD = [
     weight_g: 200,
     lay_season: "variable",
     family: "Eurypygidae",
-    fun_fact:
-      "They have an appearance the resembles the colour shades of the sunset.",
-
+    fun_fact:"They have an appearance the resembles the colour shades of the sunset.",
     wingspan_cm: 65,
   },
   {
@@ -99,10 +88,8 @@ const birdsD = [
     weight_g: 950,
     lay_season: "variable",
     family: "Rhynochetidae",
-    fun_fact:
-      "This bird that glides (not flies) has skin flaps to cover its nostrils that prevent dirt from entering them when it digs the forest floor for leaves and its prey. ",
-
-    wingspan_cm: 63,
+    fun_fact:"This bird that glides (not flies) has skin flaps to cover its nostrils that prevent dirt from entering them when it digs the forest floor for leaves and its prey.",
+    wingspan_cm: 63
   },
   {
     common_name: "Lanner Falcon",
@@ -114,10 +101,8 @@ const birdsD = [
     weight_g: 610,
     lay_season: "winter",
     family: "Falconidae",
-    fun_fact:
-      "These birds are solitary and lives with one partner per lifetime and do not build their own nests but used abandoned ones to breed. ",
-
-    wingspan_cm: 103,
+    fun_fact:"These birds are solitary and lives with one partner per lifetime and do not build their own nests but used abandoned ones to breed.",
+    wingspan_cm: 103
   },
 
   {
@@ -130,9 +115,8 @@ const birdsD = [
     weight_g: 180,
     lay_season: "spring",
     family: "Falconidae",
-    fun_fact: "They often hunt along roads and motorways",
-
-    wingspan_cm: 80,
+    fun_fact: "They often hunt along roads and motorways.",
+    wingspan_cm: 80
   },
   {
     common_name: "Peregrine Falcon",
@@ -144,10 +128,8 @@ const birdsD = [
     weight_g: 155,
     lay_season: "spring",
     family: "Falconidae",
-    fun_fact:
-      "They have a 3rd eyelid called a nictitating membrane for eye protection and have unmatched flight speeds of 242mph.",
-
-    wingspan_cm: 115,
+    fun_fact:"They have a 3rd eyelid called a nictitating membrane for eye protection and have unmatched flight speeds of 242mph.",
+    wingspan_cm: 115
   },
   {
     common_name: "Lilac-breasted roller",
@@ -159,10 +141,8 @@ const birdsD = [
     weight_g: 110,
     lay_season: "spring/summer/autumn",
     family: "Coraciidae",
-    fun_fact:
-      "They have syndactyl fused 2nd and 3rd digits on for their feet and they take part in acrobatic aerial displays, especially during courtship.",
-
-    wingspan_cm: 57,
+    fun_fact:"They have syndactyl fused 2nd and 3rd digits on for their feet and they take part in acrobatic aerial displays, especially during courtship.",
+    wingspan_cm: 57
   },
   {
     common_name: "Speckled mousebird",
@@ -174,10 +154,8 @@ const birdsD = [
     weight_g: 57,
     lay_season: "spring/summer",
     family: "Coliidae",
-    fun_fact:
-      "This bird gives off distinct alarm calls depending on the type of predator in the vicinity; a shriek for terrestrial predators and explosive pit for for aerial predators.",
-
-    wingspan_cm: 56,
+    fun_fact:"This bird gives off distinct alarm calls depending on the type of predator in the vicinity; a shriek for terrestrial predators and explosive pit for for aerial predators.",
+    wingspan_cm: 56
   },
   {
     common_name: "Common Cuckoo",
@@ -189,10 +167,8 @@ const birdsD = [
     weight_g: 120,
     lay_season: "summer",
     family: "Cuculidae",
-    fun_fact:
-      "This bird is a brood parasite that lays eggs in other birds' nests and unlike most birds lays eggs in the afternoons not the mornings. ",
-
-    wingspan_cm: 59,
+    fun_fact:"This bird is a brood parasite that lays eggs in other birds' nests and unlike most birds lays eggs in the afternoons not the mornings. ",
+    wingspan_cm: 59
   },
   {
     common_name: "Asian Koel",
@@ -204,10 +180,8 @@ const birdsD = [
     weight_g: 290,
     lay_season: "spring/summer",
     family: "Cuculidae",
-    fun_fact:
-      "This bird is the state bird of the INdian union territory of Puducherry. It also eats fruits of the known poisionous plant Cascabela thevetia (Yellow oleandar). It also makes distinctive loud calls at night.",
-
-    wingspan_cm: 77,
+    fun_fact:"This bird is the state bird of the INdian union territory of Puducherry. It also eats fruits of the known poisionous plant Cascabela thevetia (Yellow oleandar). It also makes distinctive loud calls at night.",
+    wingspan_cm: 77
   },
   {
     common_name: "Greater roadrunner",
@@ -219,12 +193,9 @@ const birdsD = [
     weight_g: 390,
     lay_season: "spring/summer/autumn",
     family: "Cuculidae",
-    fun_fact:
-      "These birds are not shy and are very fast and nimble on their feet.",
-
-    wingspan_cm: 47,
+    fun_fact:"These birds are not shy and are very fast and nimble on their feet.",
+    wingspan_cm: 47
   },
-
   {
     common_name: "Blue coua",
     species_name: "Coua caerulea",
@@ -235,10 +206,8 @@ const birdsD = [
     weight_g: 40,
     lay_season: "summer/autumn/winter",
     family: "Cuculidae",
-    fun_fact:
-      "This a blue cuckoo with a reversible 3rd toe like most cuckoos and prefers jump and flop between the trees in its natural habitat of Madagascar",
-
-    wingspan_cm: 13,
+    fun_fact:"This a blue cuckoo with a reversible 3rd toe like most cuckoos and prefers jump and flop between the trees in its natural habitat of Madagascar",
+    wingspan_cm: 13
   },
   {
     common_name: "King quail",
@@ -250,10 +219,8 @@ const birdsD = [
     weight_g: 34,
     lay_season: "summer/autumn/winter",
     family: "Phasianidae",
-    fun_fact:
-      "This a blue cuckoo with a reversible 3rd toe like most cuckoos and prefers jump and flop between the trees in its natural habitat of Madagascar",
-
-    wingspan_cm: 4,
+    fun_fact:"These birds have calls that sould like descending whistles and/or rasping snoring and are one of the smallest species of quails.",
+    wingspan_cm: 4
   },
 
   {
@@ -266,10 +233,8 @@ const birdsD = [
     weight_g: 66,
     lay_season: "autumn/winter/spring",
     family: "Phasianidae",
-    fun_fact:
-      "When danger is near they will squat still instead of running and they are ground dwellers that like to forage for food in family-related coveys.",
-
-    wingspan_cm: 6,
+    fun_fact:"When danger is near they will squat still instead of running and they are ground dwellers that like to forage for food in family-related coveys.",
+    wingspan_cm: 6
   },
   {
     common_name: "Gambel's quail",
@@ -281,10 +246,8 @@ const birdsD = [
     weight_g: 160,
     lay_season: "spring/summer",
     family: "Odontophoridae",
-    fun_fact:
-      "They have a characteristic feather plume on their heads; males are easily distinguished by their black faces and these birds thrive in the arid deserts around southern USA and Mexico",
-
-    wingspan_cm: 7,
+    fun_fact:"They have a characteristic feather plume on their heads; males are easily distinguished by their black faces and these birds thrive in the arid deserts around southern USA and Mexico.",
+    wingspan_cm: 7
   },
   {
     common_name: "Sandhill crane",
@@ -296,10 +259,8 @@ const birdsD = [
     weight_g: 5000,
     lay_season: "winter/spring/summer",
     family: "Gruidae",
-    fun_fact:
-      "Male Sandhill cranes perform elaborate dances to attract female mates; these birds are soem of the most ancient birds with fossils dating back millions of years; they also gather in large flocks along rivers.",
-
-    wingspan_cm: 180,
+    fun_fact:"Male Sandhill cranes perform elaborate dances to attract female mates; these birds are soem of the most ancient birds with fossils dating back millions of years; they also gather in large flocks along rivers.",
+    wingspan_cm: 180
   },
   {
     common_name: "Red-throated loon",
@@ -311,10 +272,8 @@ const birdsD = [
     weight_g: 2300,
     lay_season: "autumns/spring",
     family: "Gaviidae",
-    fun_fact:
-      "The only loon the forages for food far away from its breeding territory and does not carry its young on its back.",
-
-    wingspan_cm: 96,
+    fun_fact:"The only loon the forages for food far away from its breeding territory and does not carry its young on its back.",
+    wingspan_cm: 96
   },
   {
     common_name: "Pacific loon",
@@ -326,10 +285,8 @@ const birdsD = [
     weight_g: 2200,
     lay_season: "spring",
     family: "Gaviidae",
-    fun_fact:
-      "Has difficulty walking on land and needs open surfaces of water in order to take flight and cannot do so from land; these birds breed on tundra lakes",
-
-    wingspan_cm: 128,
+    fun_fact:"Has difficulty walking on land and needs open surfaces of water in order to take flight and cannot do so from land; these birds breed on tundra lakes.",
+    wingspan_cm: 128
   },
   {
     common_name: "Wild turkey",
@@ -341,10 +298,8 @@ const birdsD = [
     weight_g: 8000,
     lay_season: "spring",
     family: "Phasianidae",
-    fun_fact:
-      "Wild turkeys can alter their colour according to their mood and can see better than humans; also they love to gobble and sleep in trees",
-
-    wingspan_cm: 130,
+    fun_fact:"Wild turkeys can alter their colour according to their mood and can see better than humans; also they love to gobble and sleep in trees.",
+    wingspan_cm: 130
   },
   {
     common_name: "Red-crested turaco",
@@ -356,10 +311,8 @@ const birdsD = [
     weight_g: 240,
     lay_season: "all-year",
     family: "Musophagidae",
-    fun_fact:
-      'They produce sounds similar to someone shouting "Go Away!" and have mobile outer toes that can rotate forwards and backwards',
-
-    wingspan_cm: 66,
+    fun_fact:'They produce sounds similar to someone shouting "Go Away!" and have mobile outer toes that can rotate forwards and backwards.',
+    wingspan_cm: 66
   },
   {
     common_name: "Western plantain-eater",
@@ -371,10 +324,8 @@ const birdsD = [
     weight_g: 250,
     lay_season: "winter/spring/summer",
     family: "Musophagidae",
-    fun_fact:
-      "Lives in the acacia savannah, open forests and crop growing areas of W. Africa and is largely arboreal near-passerine bird",
-
-    wingspan_cm: 73,
+    fun_fact:"Lives in the acacia savannah, open forests and crop growing areas of W. Africa and is largely arboreal near-passerine bird.",
+    wingspan_cm: 73
   },
   {
     common_name: "Brown mesite",
@@ -386,10 +337,8 @@ const birdsD = [
     weight_g: 148,
     lay_season: "winter",
     family: "Mesitornithidae",
-    fun_fact:
-      "This is a ground-dwelling bird endemic to Madagascar that is inhabits humid rainforests in the east of the island country",
-
-    wingspan_cm: 15,
+    fun_fact:"This is a ground-dwelling bird endemic to Madagascar that is inhabits humid rainforests in the east of the island country.",
+    wingspan_cm: 15
   },
   {
     common_name: "White-breasted mesite",
@@ -401,10 +350,8 @@ const birdsD = [
     weight_g: 105,
     lay_season: "autumn/winter/spring",
     family: "Mesitornithidae",
-    fun_fact:
-      "This ground-dwelling bird is found in the western decidous forests of Madagascar and has brown upper parts and pale whitish underparts and display odd defensive behaviour of flying into trees and freezing when danger is nearby.",
-
-    wingspan_cm: 15,
+    fun_fact:"This ground-dwelling bird is found in the western decidous forests of Madagascar and has brown upper parts and pale whitish underparts and display odd defensive behaviour of flying into trees and freezing when danger is nearby.",
+    wingspan_cm: 15
   },
   {
     common_name: "Hoatzin",
@@ -416,10 +363,8 @@ const birdsD = [
     weight_g: 1000,
     lay_season: "winter/spring/summer",
     family: "Opisthocomidae",
-    fun_fact:
-      'These birds have an enlarged crop that ferments the vegetation they eat before it enters the gut hence these birds are called "stinkbirds" because their guano has an unpleasant odour.',
-
-    wingspan_cm: 28,
+    fun_fact:'These birds have an enlarged crop that ferments the vegetation they eat before it enters the gut hence these birds are called "stinkbirds" because their guano has an unpleasant odour.',
+    wingspan_cm: 28
   },
   {
     common_name: "Great bustard",
@@ -431,10 +376,8 @@ const birdsD = [
     weight_g: 6800,
     lay_season: "summer/autumn",
     family: "Otididae",
-    fun_fact:
-      "This is the heaviest flying birth on planet Earth but is on the extinction watchlist",
-
-    wingspan_cm: 220,
+    fun_fact: "This is the heaviest flying birth on planet Earth but is on the extinction watchlist.",
+    wingspan_cm: 220
   },
   {
     common_name: "Australian bustard",
@@ -446,10 +389,8 @@ const birdsD = [
     weight_g: 7000,
     lay_season: "autumn",
     family: "Otididae",
-    fun_fact:
-      "These birds prefer to walk most of the time but are the heaviest birds in Australia capable of flight.",
-
-    wingspan_cm: 230,
+    fun_fact:"These birds prefer to walk most of the time but are the heaviest birds in Australia capable of flight.",
+    wingspan_cm: 230
   },
   {
     common_name: "American flamingo",
@@ -461,25 +402,21 @@ const birdsD = [
     weight_g: 3100,
     lay_season: "spring/summer",
     family: "Phoenicopteridae",
-    fun_fact:
-      "These birds pink colour is a product of their diet and they are capable of standing on one leg with the other being tucked under its abdomen, which is does to reduce heat loss through its legs.",
-
-    wingspan_cm: 148,
+    fun_fact:"These birds pink colour is a product of their diet and they are capable of standing on one leg with the other being tucked under its abdomen, which is does to reduce heat loss through its legs.",
+    wingspan_cm: 148
   },
   {
     common_name: "Lesser flamingo",
     species_name: "Phoeniconaias minor",
     wing_colour: "light-pink",
-    diet: molluscivorous,
+    diet: "molluscivorous",
     can_Fly: true,
     length_cm: 95,
     weight_g: 2200,
     lay_season: "autumn winter",
     family: "Phoenicopteridae",
-    fun_fact:
-      "They feed in saline and alkaline lakes and the smallest species of flamingo; there are less than 40,000(total) of these birds in central, southern and western Africa as they are prey to various predators",
-
-    wingspan_cm: 105,
+    fun_fact:"They feed in saline and alkaline lakes and the smallest species of flamingo; there are less than 40,000(total) of these birds in central, southern and western Africa as they are prey to various predators.",
+    wingspan_cm: 105
   },
   {
     common_name: "Great cormorant",
@@ -491,8 +428,8 @@ const birdsD = [
     weight_g: 2900,
     lay_season: "winter",
     family: "Phalacrocoracidae",
-    fun_fact:
-      "They possess excellent diving and swimming abilities and use that ability to hoard the prey they eat. When out of water they like roosting on tree tops",
+    fun_fact:"They possess excellent diving and swimming abilities and use that ability to hoard the prey they eat. When out of water they like roosting on tree tops.",
+    wingspan_cm: 140
   },
   {
     common_name: "Spot-billed pelican",
@@ -504,10 +441,8 @@ const birdsD = [
     weight_g: 4900,
     lay_season: "autumn/winter/spring",
     family: "Pelecanidae",
-    fun_fact:
-      "They are on the conservation list as their numbers are reducing; their nests are on low trees near wetlands and human habitations;",
-
-    wingspan_cm: 246,
+    fun_fact:"They are on the conservation list as their numbers are reducing; their nests are on low trees near wetlands and human habitations.",
+    wingspan_cm: 246
   },
   {
     common_name: "Brown pelican",
@@ -519,10 +454,8 @@ const birdsD = [
     weight_g: 5000,
     lay_season: "spring/summer",
     family: "Pelecanidae",
-    fun_fact:
-      "These birds fly in v-shaped groups formations (like squadrons) and noisy gulls why try to steal fish from their membranous pouches as it drains water out after scooping at it estaurine hunting grounds; they crash dive for their prey",
-
-    wingspan_cm: 200,
+    fun_fact:"These birds fly in v-shaped groups formations (like squadrons) and noisy gulls why try to steal fish from their membranous pouches as it drains water out after scooping at it estaurine hunting grounds; they crash dive for their prey.",
+    wingspan_cm: 200
   },
   {
     common_name: "Magnificent frigatebird",
@@ -534,10 +467,8 @@ const birdsD = [
     weight_g: 1300,
     lay_season: "winter/spring",
     family: "Fregatidae",
-    fun_fact:
-      "These birds are found in South and Central America, and the southern USA and got their name from French naturalist Baptiste du Tetre who said they looked like frigate ships pirates used to rob other ships and have an inflatable red gular sack they use to impress females.",
-
-    wingspan_cm: 207,
+    fun_fact:"These birds are found in South and Central America, and the southern USA and got their name from French naturalist Baptiste du Tetre who said they looked like frigate ships pirates used to rob other ships and have an inflatable red gular sack they use to impress females.",
+    wingspan_cm: 207
   },
   {
     common_name: "Red-billed tropic bird",
@@ -549,10 +480,8 @@ const birdsD = [
     weight_g: 680,
     lay_season: "spring/summer",
     family: "Phaethontidae",
-    fun_fact:
-      "These birds have characteristic long slender red tail and are found in the Indian and Pacific oceans and is known catching flying fish in the air.",
-
-    wingspan_cm: 105,
+    fun_fact:"These birds have characteristic long slender red tail and are found in the Indian and Pacific oceans and is known catching flying fish in the air.",
+    wingspan_cm: 105
   },
   {
     common_name: "White-tailed tropic bird",
@@ -564,10 +493,8 @@ const birdsD = [
     weight_g: 335,
     lay_season: "spring/summer",
     family: "Phaethontidae",
-    fun_fact:
-      "Identified for its long slender white tail and is Bermuda's only locally remaining seabird.",
-
-    wingspan_cm: 82,
+    fun_fact:"Identified for its long slender white tail and is Bermuda's only locally remaining seabird.",
+    wingspan_cm: 82
   },
   {
     common_name: "Brown jacamar",
@@ -579,10 +506,8 @@ const birdsD = [
     weight_g: 22,
     lay_season: "spring",
     family: "Galbulidae",
-    fun_fact:
-      "This South American is bird is found in the canopy of forests and the savanna woodlands",
-
-    wingspan_cm: 9,
+    fun_fact:"This South American is bird is found in the canopy of forests and the savanna woodlands.",
+    wingspan_cm: 9
   },
   {
     common_name: "Northern flicker",
@@ -594,10 +519,8 @@ const birdsD = [
     weight_g: 105,
     lay_season: "spring/summer",
     family: "Picidae",
-    fun_fact:
-      "One of the only brownish-coloured woodpeckers around that nest in old burrows of Belted kingfishers and Bank swallows",
-
-    wingspan_cm: 38,
+    fun_fact:"One of the only brownish-coloured woodpeckers around that nest in old burrows of Belted kingfishers and Bank swallows.",
+    wingspan_cm: 38
   },
   {
     common_name: "Pileated woodpecker",
@@ -609,10 +532,8 @@ const birdsD = [
     weight_g: 225,
     lay_season: "spring",
     family: "Picidae",
-    fun_fact:
-      "One of the only brownish-coloured woodpeckers around that nest in old burrows of Belted kingfishers and Bank swallows",
-
-    wingspan_cm: 54,
+    fun_fact:"One of the largest woodpeckers in North America; they create hammerings to attract mates and to establish territorial boundaries.",
+    wingspan_cm: 54
   },
   {
     common_name: "Moustached puffbird",
@@ -624,10 +545,8 @@ const birdsD = [
     weight_g: 50,
     lay_season: "spring/summer/autumn",
     family: "Bucconidae",
-    fun_fact:
-      "This South American bird has a large bill with white whiskers that are in fact a tuft of feathers",
-
-    wingspan_cm: 11,
+    fun_fact:"This South American bird has a large bill with white whiskers that are in fact a tuft of feathers.",
+    wingspan_cm: 11
   },
   {
     common_name: "Pied-billed grebe",
@@ -639,10 +558,8 @@ const birdsD = [
     weight_g: 430,
     lay_season: "spring/summer/autumn",
     family: "Podicipedidae",
-    fun_fact:
-      "These birds have thick bills that turn silver and black in the summer.",
-
-    wingspan_cm: 16,
+    fun_fact:"These birds have thick bills that turn silver and black in the summer.",
+    wingspan_cm: 16
   },
   {
     common_name: "Great crested grebe",
@@ -654,10 +571,8 @@ const birdsD = [
     weight_g: 710,
     lay_season: "spring/summer",
     family: "Podicipedidae",
-    fun_fact:
-      "These birds have ornate orange-black plume and ruff around their heads that they use to do elaborate synchronized dances when mating and in courtship",
-
-    wingspan_cm: 70,
+    fun_fact:"These birds have ornate orange-black plume and ruff around their heads that they use to do elaborate synchronized dances when mating and in courtship.",
+    wingspan_cm: 70
   },
   {
     common_name: "Western grebe",
@@ -669,10 +584,8 @@ const birdsD = [
     weight_g: 1500,
     lay_season: "spring",
     family: "Podicipedidae",
-    fun_fact:
-      "During courtship the male and female are polite to each other and display reeds to each other as well as doing courtship dances. They are also excellent swimmers and divers due to their toe anatomy",
-
-    wingspan_cm: 59,
+    fun_fact:"During courtship the male and female are polite to each other and display reeds to each other as well as doing courtship dances. They are also excellent swimmers and divers due to their toe anatomy.",
+    wingspan_cm: 59
   },
   {
     common_name: "Eurasian bullfinch",
@@ -684,10 +597,8 @@ const birdsD = [
     weight_g: 24,
     lay_season: "spring/summer",
     family: "Fringillidae",
-    fun_fact:
-      "They have a bull-headed appearance and were once popular cage birds; they were taught how to imitate whistling sounds in the past; they have black heads usually and orange underbellies",
-
-    wingspan_cm: 22,
+    fun_fact:"They have a bull-headed appearance and were once popular cage birds; they were taught how to imitate whistling sounds in the past; they have black heads usually and orange underbellies.",
+    wingspan_cm: 22
   },
   {
     common_name: "House sparrow",
@@ -699,10 +610,8 @@ const birdsD = [
     weight_g: 29,
     lay_season: "spring/summer",
     family: "Passeridae",
-    fun_fact:
-      "These birds nest in loose colonies along hedges and bushes; this extends even to building crevices. Some have even been recorded living in warehouses.",
-
-    wingspan_cm: 23,
+    fun_fact:"These birds nest in loose colonies along hedges and bushes; this extends even to building crevices. Some have even been recorded living in warehouses.",
+    wingspan_cm: 23
   },
   {
     common_name: "Eurasian skylark",
@@ -714,10 +623,8 @@ const birdsD = [
     weight_g: 46,
     lay_season: "spring/summer",
     family: "Alaudidae",
-    fun_fact:
-      "Skylarks are one of the 19 species in decline in the UK; males have broader wings than females that helps them hover and sing at higher heights; it is speculated this is part of what attracts females to males in mating season",
-
-    wingspan_cm: 36,
+    fun_fact:"Skylarks are one of the 19 species in decline in the UK; males have broader wings than females that helps them hover and sing at higher heights; it is speculated this is part of what attracts females to males in mating season.",
+    wingspan_cm: 36
   },
   {
     common_name: "Eurasian blue tit",
@@ -729,10 +636,8 @@ const birdsD = [
     weight_g: 11,
     lay_season: "spring/summer",
     family: "Paridae",
-    fun_fact:
-      "These birds nest in tree boxes and tree holes. They are adapted to living in woodland and gardens; they will hang upside-down in order to peck at feeder to eat and for their own entertainment",
-
-    wingspan_cm: 18,
+    fun_fact:"These birds nest in tree boxes and tree holes. They are adapted to living in woodland and gardens; they will hang upside-down in order to peck at feeder to eat and for their own entertainment.",
+    wingspan_cm: 18
   },
   {
     common_name: "Bohemian waxwing",
@@ -744,10 +649,8 @@ const birdsD = [
     weight_g: 54,
     lay_season: "summer",
     family: "Bombycillidae",
-    fun_fact:
-      "When a flock of these birds take off or land their wings make a distinctive rattling sound that can be heard from just over 1 foot away.",
-
-    wingspan_cm: 33,
+    fun_fact:"When a flock of these birds take off or land their wings make a distinctive rattling sound that can be heard from just over 1 foot away.",
+    wingspan_cm: 33
   },
   {
     common_name: "Asian glossy starling",
@@ -759,10 +662,8 @@ const birdsD = [
     weight_g: 55,
     lay_season: "spring/summer",
     family: "Sturnidae",
-    fun_fact:
-      "These birds are highly sociable and forage for food in groups of 20; they also perform some ritualistic displays at their nesting/roosting site before settling down. Found in S.E Asia",
-
-    wingspan_cm: 12,
+    fun_fact:"These birds are highly sociable and forage for food in groups of 20; they also perform some ritualistic displays at their nesting/roosting site before settling down. Found in S.E Asia.",
+    wingspan_cm: 12
   },
   {
     common_name: "Wood thrush",
@@ -774,10 +675,8 @@ const birdsD = [
     weight_g: 43,
     lay_season: "spring/summer",
     family: "Turdidae",
-    fun_fact:
-      "It has a dark-brown spotted underbelly as sings a beautiful song as it's one of the songbirds; it symbolizes to many people inner peace and peace of mind",
-
-    wingspan_cm: 36,
+    fun_fact:"It has a dark-brown spotted underbelly as sings a beautiful song as it's one of the songbirds; it symbolizes to many people inner peace and peace of mind.",
+    wingspan_cm: 36
   },
   {
     common_name: "Common blackbird",
@@ -789,10 +688,8 @@ const birdsD = [
     weight_g: 106,
     lay_season: "spring/summer",
     family: "Turdidae",
-    fun_fact:
-      "One of the most common birds in the UK; it is known for singing a mellow song. Males are black with orange-yellow beaks while females are brown with spots and streaks and have a brown beak",
-
-    wingspan_cm: 35,
+    fun_fact:"One of the most common birds in the UK; it is known for singing a mellow song. Males are black with orange-yellow beaks while females are brown with spots and streaks and have a brown beak.",
+    wingspan_cm: 35
   },
   {
     common_name: "Superb fairywren",
@@ -804,10 +701,8 @@ const birdsD = [
     weight_g: 12,
     lay_season: "spring/summer",
     family: "Maluridae",
-    fun_fact:
-      "One of the first Australian birds to be described. The have been labelled the least loyal birds as one female flirts and courts with up to 13 other males during breeding season and three-quarters of births are sired from males outside of the bird's current social group",
-
-    wingspan_cm: 27,
+    fun_fact:"One of the first Australian birds to be described. The have been labelled the least loyal birds as one female flirts and courts with up to 13 other males during breeding season and three-quarters of births are sired from males outside of the bird's current social group.",
+    wingspan_cm: 27
   },
   {
     common_name: "Antarctic petrel",
@@ -819,10 +714,8 @@ const birdsD = [
     weight_g: 675,
     lay_season: "autumn",
     family: "Procellariidae",
-    fun_fact:
-      "These birds are highly social and like to fly with its species and other mixed species of birds; these birds are also attracted to the bow of ships",
-
-    wingspan_cm: 104,
+    fun_fact:"These birds are highly social and like to fly with its species and other mixed species of birds; these birds are also attracted to the bow of ships.",
+    wingspan_cm: 104
   },
   {
     common_name: "Wandering albatross",
@@ -834,10 +727,8 @@ const birdsD = [
     weight_g: 12700,
     lay_season: "winter",
     family: "Diomedeidae",
-    fun_fact:
-      "These birds sleep on the water's surface and glide during the day for food; they practice many behaviours such as bill-flapping, pointing to the sky, croacking, bill-touching, trumpeting and head-shaking. It's population is under threat though in the southern hemispheric islands due to being hunted",
-
-    wingspan_cm: 320,
+    fun_fact:"These birds sleep on the water's surface and glide during the day for food; they practice many behaviours such as bill-flapping, pointing to the sky, croacking, bill-touching, trumpeting and head-shaking. It's population is under threat though in the southern hemispheric islands due to being hunted.",
+    wingspan_cm: 320
   },
   {
     common_name: "Sooty albatross",
@@ -849,10 +740,8 @@ const birdsD = [
     weight_g: 3400,
     lay_season: "autumn",
     family: "Diomedeidae",
-    fun_fact:
-      "These birds are located around the southern hemispheric islands extending towards Australia; they have a black face with a white crescent on their back; they breed on cliffs and steep slopes",
-
-    wingspan_cm: 200,
+    fun_fact:"These birds are located around the southern hemispheric islands extending towards Australia; they have a black face with a white crescent on their back; they breed on cliffs and steep slopes.",
+    wingspan_cm: 200
   },
   {
     common_name: "Pied cockatiel",
@@ -864,10 +753,8 @@ const birdsD = [
     weight_g: 102,
     lay_season: "all-year",
     family: "Cacatuidae",
-    fun_fact:
-      "Became popular in th 1950s out of the first mutation of the wildtype grey cockatiel with yellow and white feathers mixed with orange cheek patches; they make great pets as theya re very comical and can be taught to talk from which point they will expand their vocaculary",
-
-    wingspan_cm: 29,
+    fun_fact:"Became popular in th 1950s out of the first mutation of the wildtype grey cockatiel with yellow and white feathers mixed with orange cheek patches; they make great pets as theya re very comical and can be taught to talk from which point they will expand their vocaculary.",
+    wingspan_cm: 29
   },
   {
     common_name: "Common parakeet (budgerigar)",
@@ -879,10 +766,8 @@ const birdsD = [
     weight_g: 40,
     lay_season: "autumn/winter/spring",
     family: "Psittaculidae",
-    fun_fact:
-      "Their hearing range is 400-20000Hz; they can remember certain frequencies of sounds and mimic them; their brain can also process up to 150 images per second; they yellow faces usually and green underbellies",
-
-    wingspan_cm: 30,
+    fun_fact:"Their hearing range is 400-20000Hz; they can remember certain frequencies of sounds and mimic them; their brain can also process up to 150 images per second; they yellow faces usually and green underbellies.",
+    wingspan_cm: 30
   },
   {
     common_name: "Sulphur-crested cockatoo",
@@ -894,10 +779,8 @@ const birdsD = [
     weight_g: 930,
     lay_season: "summer/autumn/winter/",
     family: "Cacatuidae",
-    fun_fact:
-      "They have a distinctive yellow crest on their head that props up when they become alarmed by something in their nearby environment. Both parents take turns in incubating eggs. Teh are on of the most affectionate birds and crave being petted.",
-
-    wingspan_cm: 103,
+    fun_fact:"They have a distinctive yellow crest on their head that props up when they become alarmed by something in their nearby environment. Both parents take turns in incubating eggs. Teh are on of the most affectionate birds and crave being petted.",
+    wingspan_cm: 103
   },
   {
     common_name: "Rosy-faced lovebird",
@@ -909,10 +792,8 @@ const birdsD = [
     weight_g: 62,
     lay_season: "winter/spring",
     family: "Psittaculidae",
-    fun_fact:
-      "Females have mostly green plumage while males tend to have a crown of red feathers. Rosy-faced lovebirds have soft pink faces and turn towards each other in an affectionate loving way to sleep and feed each other",
-
-    wingspan_cm: 10,
+    fun_fact:"Females have mostly green plumage while males tend to have a crown of red feathers. Rosy-faced lovebirds have soft pink faces and turn towards each other in an affectionate loving way to sleep and feed each other.",
+    wingspan_cm: 10
   },
   {
     common_name: "Grey parrot",
@@ -924,10 +805,8 @@ const birdsD = [
     weight_g: 400,
     lay_season: "autumn",
     family: "Psittacidae",
-    fun_fact:
-      "These birds can live up to 80 years and are intelligent but have the emotional stability of a 5 year old and crack jokes when they are taught to talk. But they are the ability amass a large repetoire of vocabulary of 1000 words or more; caring for one is challenging as they need ample exercise and socialization.",
-
-    wingspan_cm: 47,
+    fun_fact:"These birds can live up to 80 years and are intelligent but have the emotional stability of a 5 year old and crack jokes when they are taught to talk. But they are the ability amass a large repetoire of vocabulary of 1000 words or more; caring for one is challenging as they need ample exercise and socialization.",
+    wingspan_cm: 47
   },
   {
     common_name: "Black-bellied sandgrouse",
@@ -939,10 +818,8 @@ const birdsD = [
     weight_g: 590,
     lay_season: "spring/summer",
     family: "Pteroclidae",
-    fun_fact:
-      "These game birds thrive in the deserts and are fast walkers and flyers",
-
-    wingspan_cm: 72,
+    fun_fact:"These game birds thrive in the deserts and are fast walkers and flyers.",
+    wingspan_cm: 72
   },
   {
     common_name: "Pin-tailed sandgrouse",
@@ -954,10 +831,8 @@ const birdsD = [
     weight_g: 380,
     lay_season: "spring/summer",
     family: "Pteroclidae",
-    fun_fact:
-      "Females have white throats while males have black throats and are found in dried out river beds and lakes and dry plains; they give of low laughter-like calls while in mid-flight",
-
-    wingspan_cm: 61,
+    fun_fact:"Females have white throats while males have black throats and are found in dried out river beds and lakes and dry plains; they give of low laughter-like calls while in mid-flight.",
+    wingspan_cm: 61
   },
   {
     common_name: "Greater rhea",
@@ -969,10 +844,8 @@ const birdsD = [
     weight_g: 2300,
     lay_season: "summer/autumn/winter",
     family: "Rheidae",
-    fun_fact:
-      "They continuous move while they feed;their wings are quite large for a flightless bird but these wings rudders used for running and dodging predators. The males incubate the hatched chicks and care for them.",
-
-    wingspan_cm: 150,
+    fun_fact:"They continuous move while they feed;their wings are quite large for a flightless bird but these wings rudders used for running and dodging predators. The males incubate the hatched chicks and care for them.",
+    wingspan_cm: 150
   },
   {
     common_name: "Darwin's rhea",
@@ -984,10 +857,8 @@ const birdsD = [
     weight_g: 20000,
     lay_season: "autumn/winter",
     family: "Rheidae",
-    fun_fact:
-      "During laying of the eggs by the female the male becomes really aggressive and protective while incubating the eggs, hence the females leave the eggs near the nest rather than in it and the male scoops the eggs into the nest; they are generally quite birds outside of their youth and in breeding.",
-
-    wingspan_cm: 207,
+    fun_fact:"During laying of the eggs by the female the male becomes really aggressive and protective while incubating the eggs, hence the females leave the eggs near the nest rather than in it and the male scoops the eggs into the nest; they are generally quite birds outside of their youth and in breeding.",
+    wingspan_cm: 207
   },
   {
     common_name: "Masai ostrich",
@@ -999,10 +870,8 @@ const birdsD = [
     weight_g: 155000,
     lay_season: "spring/summer",
     family: "Struthionidae",
-    fun_fact:
-      "One of the largest birds in the world; it is hunted today for its meat,eggs and feathers; this has partially contributed to its population decline.During mating the male's neck turns a pink hue as a mating display to potential females",
-
-    wingspan_cm: 200,
+    fun_fact:"One of the largest birds in the world; it is hunted today for its meat,eggs and feathers; this has partially contributed to its population decline.During mating the male's neck turns a pink hue as a mating display to potential females.",
+    wingspan_cm: 200
   },
   {
     common_name: "Southern cassowary",
@@ -1014,10 +883,8 @@ const birdsD = [
     weight_g: 44000,
     lay_season: "summer/autumn",
     family: "Casuariidae",
-    fun_fact:
-      "Native to Australia and Paupa New Guinea these birds are the closest living species to dinosaurs today; also the male takes care of building a nest and incubating the eggs once the females have laid the eggs",
-
-    wingspan_cm: 170,
+    fun_fact:"Native to Australia and Paupa New Guinea these birds are the closest living species to dinosaurs today; also the male takes care of building a nest and incubating the eggs once the females have laid the eggs.",
+    wingspan_cm: 170
   },
   {
     common_name: "Emu",
@@ -1029,10 +896,8 @@ const birdsD = [
     weight_g: 34,
     lay_season: "autumn/winter/spring",
     family: "Casuariidae",
-    fun_fact:
-      "The birds native to Australia are the second largest bird after ostrich and hae 2 eyelids (one for blinking and the other to prevent sand and dust from entering their eyes; they have a top running speed of 30mph",
-
-    wingspan_cm: 20,
+    fun_fact:"The birds native to Australia are the second largest bird after ostrich and hae 2 eyelids (one for blinking and the other to prevent sand and dust from entering their eyes; they have a top running speed of 30mph.",
+    wingspan_cm: 20
   },
   {
     common_name: "Barn owl",
@@ -1044,10 +909,8 @@ const birdsD = [
     weight_g: 550,
     lay_season: "spring/summer",
     family: "Tytonidae",
-    fun_fact:
-      "These owls hunt by sound rather than sight using their heart-shpaed feather on the edge of their face in order to trap sound; they pais mate for life and when they are flying they are completely silent",
-
-    wingspan_cm: 90,
+    fun_fact:"These owls hunt by sound rather than sight using their heart-shpaed feather on the edge of their face in order to trap sound; the pairs mate for life and when they are flying they are completely silent.",
+    wingspan_cm: 90
   },
   {
     common_name: "Great horned owl",
@@ -1059,10 +922,8 @@ const birdsD = [
     weight_g: 1400,
     lay_season: "spring",
     family: "Strigidae",
-    fun_fact:
-      'These owl get their name from the two horn-shaped tufts of feathers on either side of their head; this is the owl that makes the characteristic "Hoo HooHoooooo HooHoo" sound that can be heard from miles away. ',
-
-    wingspan_cm: 140,
+    fun_fact:'These owl get their name from the two horn-shaped tufts of feathers on either side of their head; this is the owl that makes the characteristic "Hoo HooHoooooo HooHoo" sound that can be heard from miles away.',
+    wingspan_cm: 140
   },
   {
     common_name: "Tawny owl",
@@ -1074,10 +935,8 @@ const birdsD = [
     weight_g: 770,
     lay_season: "spring",
     family: "Strigidae",
-    fun_fact:
-      'These male and female owls at night make a combination of sounds that can be heard collectively as a "ke-wickk" from the female and a "hoo-hoo-oooo" from the territorial male, as well as other unique vocalisations that can only be heard close up',
-
-    wingspan_cm: 94,
+    fun_fact:'These male and female owls at night make a combination of sounds that can be heard collectively as a "ke-wickk" from the female and a "hoo-hoo-oooo" from the territorial male, as well as other unique vocalisations that can only be heard close up.',
+    wingspan_cm: 94
   },
   {
     common_name: "Emperor penguin",
@@ -1089,10 +948,8 @@ const birdsD = [
     weight_g: 23000,
     lay_season: "spring/summer",
     family: "Spheniscidae",
-    fun_fact:
-      "These are the biggest species of penguin today; they can dive deep into ice cold water up to a recorded depth of 565m when catching fish and can hold their breath underwater for 22 minutes in water.",
-
-    wingspan_cm: 83,
+    fun_fact:"These are the biggest species of penguin today; they can dive deep into ice cold water up to a recorded depth of 565m when catching fish and can hold their breath underwater for 22 minutes in water.",
+    wingspan_cm: 83
   },
   {
     common_name: "Adélie penguin",
@@ -1104,10 +961,8 @@ const birdsD = [
     weight_g: 4700,
     lay_season: "autumn/winter/summer",
     family: "Spheniscidae",
-    fun_fact:
-      "These penguins are small but extremely feisty and will confidently take on larger predators like seals and large seabirds and funnily steal rocks; but the population is currently under threat in their habitat",
-
-    wingspan_cm: 56,
+    fun_fact:"These penguins are small but extremely feisty and will confidently take on larger predators like seals and large seabirds and funnily steal rocks; but the population is currently under threat in their habitat.",
+    wingspan_cm: 56
   },
   {
     common_name: "Humboldt penguin",
@@ -1119,10 +974,8 @@ const birdsD = [
     weight_g: 4400,
     lay_season: "all-year",
     family: "Spheniscidae",
-    fun_fact:
-      "These penguins are under threat as the guano they use to build their nests is mined as fertiliser; they have a white underbelly with black dots and a long black streak on its upper abdomen",
-
-    wingspan_cm: 52,
+    fun_fact:"These penguins are under threat as the guano they use to build their nests is mined as fertiliser; they have a white underbelly with black dots and a long black streak on its upper abdomen.",
+    wingspan_cm: 52
   },
 
   {
@@ -1135,10 +988,8 @@ const birdsD = [
     weight_g: 6900,
     lay_season: "summer/winter",
     family: "Spheniscidae",
-    fun_fact:
-      "These penguins have many predators and are hunted so they are under threat; they prefer to inhabit areas that are partially covered by ice or covered by none at all. Theya re friendly to other species of penguins and quite romantic",
-
-    wingspan_cm: 23,
+    fun_fact:"These penguins have many predators and are hunted so they are under threat; they prefer to inhabit areas that are partially covered by ice or covered by none at all. Theya re friendly to other species of penguins and quite romantic.",
+    wingspan_cm: 23
   },
   {
     common_name: "Macaroni penguin",
@@ -1150,10 +1001,8 @@ const birdsD = [
     weight_g: 5500,
     lay_season: "autumn",
     family: "Spheniscidae",
-    fun_fact:
-      "These penguins are also under threat; they are named after a hat not pasta; their nests are lined by rocks and they are not aggressive, until they fall in love that is during courtship",
-
-    wingspan_cm: 71,
+    fun_fact:"These penguins are also under threat; they are named after a hat not pasta; their nests are lined by rocks and they are not aggressive, until they fall in love that is during courtship.",
+    wingspan_cm: 71
   },
   {
     common_name: "Blue-footed booby",
@@ -1165,10 +1014,8 @@ const birdsD = [
     weight_g: 1500,
     lay_season: "summer",
     family: "Sulidae",
-    fun_fact:
-      "They brightness of the blue feet these bird have is an indication of their health (the more pigmented the healthier the bird); males whistle to the females they want to attack",
-
-    wingspan_cm: 147,
+    fun_fact:"They brightness of the blue feet these bird have is an indication of their health (the more pigmented the healthier the bird); males whistle to the females they want to attack.",
+    wingspan_cm: 147
   },
   {
     common_name: "Red-footed booby",
@@ -1180,10 +1027,8 @@ const birdsD = [
     weight_g: 1000,
     lay_season: "winter/spring",
     family: "Sulidae",
-    fun_fact:
-      "They have distinctive red feet and a blue beak; they nest in trees only in the full sun not shaded areas",
-
-    wingspan_cm: 149,
+    fun_fact:"They have distinctive red feet and a blue beak; they nest in trees only in the full sun not shaded areas.",
+    wingspan_cm: 149
   },
   {
     common_name: "Brown booby",
@@ -1195,10 +1040,8 @@ const birdsD = [
     weight_g: 1300,
     lay_season: "winter/spring",
     family: "Sulidae",
-    fun_fact:
-      'This particular booby have a comblike-toenail called a "preen claw", which they use to spread waterproofing oil from a gland in their tail throughout their weathers when preening',
-
-    wingspan_cm: 138,
+    fun_fact:'This particular booby have a comblike-toenail called a "preen claw", which they use to spread waterproofing oil from a gland in their tail throughout their weathers when preening.',
+    wingspan_cm: 138
   },
   {
     common_name: "Northern gannet",
@@ -1210,10 +1053,8 @@ const birdsD = [
     weight_g: 3000,
     lay_season: "spring",
     family: "Sulidae",
-    fun_fact:
-      "These birds incorporate odd objects into their nests like seaweed, mud, feathers and excrement. This extends to even plastics, shotgun shells, rope, golf balls, fishing lines and fountain pens meaning they have a cleanup role in nature.",
-
-    wingspan_cm: 179,
+    fun_fact:"These birds incorporate odd objects into their nests like seaweed, mud, feathers and excrement. This extends to even plastics, shotgun shells, rope, golf balls, fishing lines and fountain pens meaning they have a cleanup role in nature.",
+    wingspan_cm: 179
   },
   {
     common_name: "Elegant-crested tinamou",
@@ -1225,10 +1066,8 @@ const birdsD = [
     weight_g: 760,
     lay_season: "summer/autumn",
     family: "Tinamidae",
-    fun_fact:
-      "These birds can fly but only short distances before having to land (around 500m); this partridge-like bird prefers to run rather than fly to escape predators",
-
-    wingspan_cm: 33,
+    fun_fact:"These birds can fly but only short distances before having to land (around 500m); this partridge-like bird prefers to run rather than fly to escape predators.",
+    wingspan_cm: 33
   },
   {
     common_name: "Undulated tinamou",
@@ -1240,10 +1079,8 @@ const birdsD = [
     weight_g: 300,
     lay_season: "winter/spring",
     family: "Tinamidae",
-    fun_fact:
-      'These birds are found both in wet and dry forests and emit a characteristic melancholic "whoo-who-whooo" sound repeatedly for long period during the early mornings and late afternoons',
-
-    wingspan_cm: 29,
+    fun_fact:'These birds are found both in wet and dry forests and emit a characteristic melancholic "whoo-who-whooo" sound repeatedly for long period during the early mornings and late afternoons.',
+    wingspan_cm: 29
   },
   {
     common_name: "Yellow-legged tinamou",
@@ -1255,10 +1092,8 @@ const birdsD = [
     weight_g: 150,
     lay_season: "spring",
     family: "Tinamidae",
-    fun_fact:
-      "This bird is widespread throughout Brazil and is found in wooded and shrubby habitats",
-
-    wingspan_cm: 31,
+    fun_fact:"This bird is widespread throughout Brazil and is found in wooded and shrubby habitats.",
+    wingspan_cm: 31
   },
   {
     common_name: "Orange-breasted trogon",
@@ -1270,10 +1105,8 @@ const birdsD = [
     weight_g: 56,
     lay_season: "winter/spring",
     family: "Trogonidae",
-    fun_fact:
-      "This bird's underbelly is a bright orange, which partly explains its name. It inhabits lowland and foothill forests. It calls with 3-4 characteristic hoots.",
-
-    wingspan_cm: 33,
+    fun_fact:"This bird's underbelly is a bright orange, which partly explains its name. It inhabits lowland and foothill forests. It calls with 3-4 characteristic hoots.",
+    wingspan_cm: 33
   },
   {
     common_name: "White-tailed trogon",
@@ -1285,10 +1118,8 @@ const birdsD = [
     weight_g: 82,
     lay_season: "winter/spring/summer",
     family: "Trogonidae",
-    fun_fact:
-      "They typically perch upright and motionless; they can fly very fast but are reluctant to fly far distances. Their feet are heterodactyl and they can only pluck at fruit while in flight.",
-
-    wingspan_cm: 35,
+    fun_fact:"They typically perch upright and motionless; they can fly very fast but are reluctant to fly far distances. Their feet are heterodactyl and they can only pluck at fruit while in flight.",
+    wingspan_cm: 35
   },
   {
     common_name: "Masked trogon",
@@ -1300,10 +1131,8 @@ const birdsD = [
     weight_g: 56,
     lay_season: "autumn",
     family: "Trogonidae",
-    fun_fact:
-      "This is a multi-coloured bird having green for its head, purplish-black wings, red underbelly and a black tail dotted with white spots; the male is iridescent green predominantly on its body parts while the female is predominantly brown mixed with other colours mentioned",
-
-    wingspan_cm: 31,
+    fun_fact:"This is a multi-coloured bird having green for its head, purplish-black wings, red underbelly and a black tail dotted with white spots; the male is iridescent green predominantly on its body parts while the female is predominantly brown mixed with other colours mentioned.",
+    wingspan_cm: 31
   },
   {
     common_name: "Resplendent quetzal",
@@ -1315,10 +1144,8 @@ const birdsD = [
     weight_g: 200,
     lay_season: "spring",
     family: "Trogonidae",
-    fun_fact:
-      "This is a sacred bird in Aztec and Mayan cultures where the priests wore the feathers of these birds during their ceremonies; males are more green than females while females are duller and have a shorter tail",
-
-    wingspan_cm: 40,
+    fun_fact:"This is a sacred bird in Aztec and Mayan cultures where the priests wore the feathers of these birds during their ceremonies; males are more green than females while females are duller and have a shorter tail.",
+    wingspan_cm: 40
   },
   {
     common_name: "Bald eagle",
@@ -1330,10 +1157,8 @@ const birdsD = [
     weight_g: 5900,
     lay_season: "spring",
     family: "Accipitridae",
-    fun_fact:
-      "These eagles fly at at speeds of 30mph and dive at speeds of 100mph; they develop the characteristic white head and tail feathers at age 4-6 years of age.",
-
-    wingspan_cm: 179,
+    fun_fact:"These eagles fly at at speeds of 30mph and dive at speeds of 100mph; they develop the characteristic white head and tail feathers at age 4-6 years of age.",
+    wingspan_cm: 179
   },
   {
     common_name: "Harpy eagle",
@@ -1345,10 +1170,8 @@ const birdsD = [
     weight_g: 7000,
     lay_season: "all-year",
     family: "Accipitridae",
-    fun_fact:
-      "This powerful raptor has disc like feathers on the sides of its head that can be raised and lowered like an owl; they are strong predators with 5 inch long talons that longer than those of a grizzly bear.",
-
-    wingspan_cm: 230,
+    fun_fact:"This powerful raptor has disc like feathers on the sides of its head that can be raised and lowered like an owl; they are strong predators with 5 inch long talons that longer than those of a grizzly bear.",
+    wingspan_cm: 230
   },
   {
     common_name: "Golden eagle",
@@ -1360,10 +1183,8 @@ const birdsD = [
     weight_g: 4600,
     lay_season: "spring",
     family: "Accipitridae",
-    fun_fact:
-      "This is the largest bird of prey in North America; it can reach speeds of 193km per hour during dives to catch its prey. Their wing patterns are variable and during courtship both females and males participate in circling and shallow dive maneuvers. Their nests are around cliff edges and they can be find in tall Ponderosa pines",
-
-    wingspan_cm: 222,
+    fun_fact:"This is the largest bird of prey in North America; it can reach speeds of 193km per hour during dives to catch its prey. Their wing patterns are variable and during courtship both females and males participate in circling and shallow dive maneuvers. Their nests are around cliff edges and they can be find in tall Ponderosa pines.",
+    wingspan_cm: 222
   },
 ];
 

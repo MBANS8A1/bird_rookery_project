@@ -44,7 +44,7 @@ function createBirds_rel(){ //birds table
     return db.query(`
     CREATE TABLE birds (
         bird_id SERIAL PRIMARY KEY,
-        common_name VARCHAR(50) UNIQUE NOT NULL,
+        common_name VARCHAR(60) UNIQUE NOT NULL,
         species_name VARCHAR(70) UNIQUE NOT NULL,
         wing_colour VARCHAR(25) NOT NULL,
         diet VARCHAR(60),
@@ -52,9 +52,9 @@ function createBirds_rel(){ //birds table
         length_cm INT,
         weight_g INT,
         lay_season VARCHAR(50),
-        f_id INT REFERENCES bird_families(family_id),
         fun_fact TEXT,
-        wingspan_cm INT
+        wingspan_cm INT,
+        f_id INT REFERENCES bird_families(family_id)
     )
     `)
 }

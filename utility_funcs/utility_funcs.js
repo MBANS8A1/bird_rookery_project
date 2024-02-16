@@ -33,7 +33,7 @@ function createFamiliesRef(familyData){//for birds
      })
     return familyLookup
 }
-
+// {Columbidae: 1}
 
 
 
@@ -59,7 +59,7 @@ function addOIdToFamilies(familyData,orderLookup){//switch out order in bird_fam
 }
 
 function addFIdToBirds(birdsData,familyLookup){//switch out family in birds for f_id
-  const newBirdsArray =birdsData.map((bird)=>{
+  const newBirdsArray = birdsData.map((bird)=>{
     const birdsCpy = {...bird}
     birdsCpy.f_id = familyLookup[birdsCpy.family]
     delete birdsCpy.family
