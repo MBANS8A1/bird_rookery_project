@@ -1,6 +1,7 @@
 const app = require('./app.js')
+const PORT = 3000
 
-
-app.listen(9090,()=>{
-    console.log("Listening on port 9090")
+app.listen(PORT,(err)=>{
+    if(err) console.log(err)
+    console.log(`Server listening on port ${PORT}...`)
 })

@@ -67,7 +67,7 @@ const bird_orderD = [
     order_image: "../../../bird_images/bird_order_pics/Musophagiformes.jpg",
     shape: "Elliptical wings",
     o_description:
-      "This order refers to about 18 species in 6 genera of fruit-eating African birds (i.e. turacos). Theya re unique as in their plumage is a cooper-containing pigment." //10
+      "This order refers to about 18 species in 6 genera of fruit-eating African birds (i.e. turacos). They are unique as in their plumage is a cooper-containing pigment." //10
   },
   {
     o_scientific_name: "Mesitornithiformes",
