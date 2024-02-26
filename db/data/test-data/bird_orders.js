@@ -18,7 +18,7 @@ const bird_orderTD = [
   {
     o_scientific_name: "Sphenisciformes",
     order_image: "../../../bird_images/bird_order_pics/Sphenisciformes.jpg",
-    shape: null,
+    shape: "Tapered flipper wings",
     o_description:
       "This order contains 17 species of birds known as the penguins; they are mostly found below the equator in the southern hemisphere.and range in size from 1.5-3.7 inches. They are black or dark grey with white on their crests and undersides(stomaches).The birds are flightless but are usually excellent divers and swimmers with long bills and short webbed feet on a torpedo-shaped body." //26
   },
@@ -42,7 +42,7 @@ const bird_orderTD = [
     shape: "Elliptical wings",
     o_description:
       "There are around  170 species in this order. They are found in all parts of the world but most species are found in Australia, South America, Asian and Africa. This order includes cuckoos,roadrunners,koels,malkohas, couas and coucaals. They have bills that curve downs and pointed wings. Most species live in the forests and are brown to grey in colour." //6
-  },
+  }
 ];
 
 module.exports = bird_orderTD;

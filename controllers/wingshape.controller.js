@@ -1,10 +1,10 @@
 const {selectAllShapes,selectShapeById} = require('../models/w_shape.models.js')
 
-exports.getAllShapes = (req,res) => {
-    selectAllShapes().then((shapes) => res.status(200).send({shapes}))
+exports.getAllShapes = (req,res,next) => {
+    selectAllShapes().then((shapes) => res.status(200).send({shapes})).catch(next)
 };
 
-exports.sendShapeById = (req,res) => {
+exports.sendShapeById = (req,res,next) => {
     const {wing_id} = req.params
-    selectShapeById(wing_id).then((shape) => res.status(200).send({shape}))
+    selectShapeById(wing_id).then((shape) => res.status(200).send({shape})).catch(next)
 };

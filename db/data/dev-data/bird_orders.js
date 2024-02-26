@@ -177,7 +177,7 @@ const bird_orderD = [
   {
     o_scientific_name: "Sphenisciformes",
     order_image: "../../../bird_images/bird_order_pics/Sphenisciformes.jpg",
-    shape: null,
+    shape: "Tapered flipper wings",
     o_description:
       "This order contains 17 species of birds known as the penguins; they are mostly found below the equator in the southern hemisphere.and range in size from 1.5-3.7 inches. They are black or dark grey with white on their crests and undersides(stomaches).The birds are flightless but are usually excellent divers and swimmers with long bills and short webbed feet on a torpedo-shaped body." //26
   },

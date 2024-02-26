@@ -102,7 +102,7 @@ const birdsTD = [
         length_cm: 43,
         weight_g: 290,
         lay_season: "spring/summer",
-        fun_fact:"This bird is the state bird of the INdian union territory of Puducherry. It also eats fruits of the known poisionous plant Cascabela thevetia (Yellow oleandar). It also makes distinctive loud calls at night.",
+        fun_fact:"This bird is the state bird of the Indian union territory of Puducherry. It also eats fruits of the known poisionous plant Cascabela thevetia (Yellow oleandar). It also makes distinctive loud calls at night.",
         wingspan_cm: 77,
         family: "Cuculidae"
       },

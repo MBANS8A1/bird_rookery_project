@@ -14,7 +14,7 @@ function createWingsShape_rel(){//wing_shape table
     `)
 }
 
-function createBirdOrders_rel(){//bird_orders table
+function createBirdOrders_rel(){//bird_orders tablek
     return db.query(`
     CREATE TABLE bird_orders (
         order_id SERIAL PRIMARY KEY,
@@ -90,8 +90,8 @@ function createwatcherTours_rel(){ //watchers_tours table
     return db.query(`
     CREATE TABLE watchers_tours(
         watcher_tour_id SERIAL PRIMARY KEY,
-        watcher_id INT REFERENCES birdwatchers(bw_id),
-        tour_id INT REFERENCES rookery_tour(rtour_id)
+        watcher_id INT REFERENCES birdwatchers(bw_id) ON DELETE CASCADE,
+        tour_id INT REFERENCES rookery_tour(rtour_id) ON DELETE CASCADE
     )
     `)
 }

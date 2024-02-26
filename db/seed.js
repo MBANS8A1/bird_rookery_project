@@ -3,7 +3,7 @@ const format = require('pg-format')
 const {createWingsShape_rel,createBirdOrders_rel,createBirdFamilies_rel,createBirds_rel,createrookeryTour_rel,createbirdWatchers_rel,createwatcherTours_rel} = require('./manage-relations.js')
 const{parseObjToNestedArr,createWingsRef,createOrdersRef,createFamiliesRef,addWIdToOrders,addOIdToFamilies,addFIdToBirds} = require('../utility_funcs/utility_funcs.js')
 const {birdsData,birdsFamiliesData,birdsOrdersData,birdwatchersData,wing_shapeData,rookeryTourData,watcherTourData} = require('../db/data/dev-data/index.js')
-const seeder = ({wing_shapeData,birdsOrdersData,birdsFamiliesData,birdsData,birdwatchersData,rookeryTourData,watcherTourData}) =>{
+const seed = ({wing_shapeData,birdsOrdersData,birdsFamiliesData,birdsData,birdwatchersData,rookeryTourData,watcherTourData}) =>{
       return db.query(`DROP TABLE IF EXISTS birds;`).then(()=>{
          return db.query(`DROP TABLE IF EXISTS bird_families;`)
       })
@@ -170,5 +170,5 @@ function insertIntoWatcherTourstbl(rawdata){//insert into watchers_tours
 
 
 
-module.exports = seeder
+module.exports = seed
 
