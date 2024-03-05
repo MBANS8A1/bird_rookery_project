@@ -11,7 +11,6 @@ exports.getAllTours = (req,res,next) =>{
 }
 
 exports.sendTourById = (req,res,next) => {
-    // const {rtour_id} = req.params
     const rtour_id = +req.params.rtour_id
 
     selectTourById(rtour_id).then((tour) => res.status(200).send({tour})).catch(next)

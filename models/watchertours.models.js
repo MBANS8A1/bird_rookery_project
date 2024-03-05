@@ -41,13 +41,6 @@ exports.insertNewWatcherTour= (newWatcherTour) =>{
 
  exports.updateWatcherTour = (watcher_tour_id,tour_id) =>{
 
-  // const numRegex = /[^0-9]+/ig
-
-  // if(Number((tour_id)) !== NaN){
-  //   return Promise.reject({status: 400, err: `Bad patch request: property has wrong datatype attached`})
-  // }
-
-
     const letterRegex = /[^0-9]+/ig
     if(letterRegex.test(watcher_tour_id) && typeof watcher_tour_id === 'number'){
     return Promise.reject({status: 400, err: `Bad patch request: passed in watcher_tour_id is not a valid id.`})

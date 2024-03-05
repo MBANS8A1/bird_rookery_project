@@ -33,7 +33,6 @@ function createFamiliesRef(familyData){//for birds
      })
     return familyLookup
 }
-// {Columbidae: 1}
 
 
 

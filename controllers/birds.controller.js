@@ -11,7 +11,6 @@ exports.getAllBirds = (req,res,next) =>{
 }
 
 exports.sendBirdById = (req,res,next) => {
-    // const {bird_id} = req.params
     const bird_id = +req.params.bird_id
     selectBirdById(bird_id).then((bird) => res.status(200).send({bird})).catch(next)
 };

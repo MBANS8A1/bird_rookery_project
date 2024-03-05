@@ -6,7 +6,6 @@ exports.getAllWatcherTours = (req,res,next) =>{
 }
 
 exports.sendWatcherTourById = (req,res,next) => {
-    // const {watcher_tour_id} = req.params
     const watcher_tour_id = +req.params.watcher_tour_id
 
     selectWatcherTourById(watcher_tour_id ).then((watcher_tour) => res.status(200).send({watcher_tour})).catch(next)

@@ -120,10 +120,6 @@ exports.insertNewTour= (newTour) =>{
 
   exports.updateTourCost = (rtour_id,cost_pennies) =>{
 
-    //  const numRegex = /[0-9\.]+/ig
-
-    //  if(Number(cost_pennies) !== NaN &&)
-
     const letterRegex = /[^0-9]+/ig
     if(letterRegex.test(rtour_id) && typeof rtour_id === 'number'){
     return Promise.reject({status: 400, err: `Bad patch request: passed in rtour_id is not a valid id.`})

@@ -9,7 +9,6 @@ exports.getAllBWatchers = (req,res,next) =>{
    }
 
 exports.sendBirdWatcherById = (req,res,next) =>{
-    // const {bw_id} = req.params
     const bw_id = +req.params.bw_id
     selectBirdWatcherById(bw_id).then((birdwatcher) => res.status(200).send({birdwatcher})).catch(next)
 }

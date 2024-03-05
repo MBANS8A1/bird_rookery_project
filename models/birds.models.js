@@ -33,7 +33,7 @@ exports.selectAllBirds = (sort_byfirst,order1,diet,sort_bysecond,order2) =>{
         queryStr += ` WHERE diet ILIKE $1`;
     }
 
-    if(sort_byfirst){//AMEND HERE
+    if(sort_byfirst){
         queryStr += ` ORDER BY ${sort_byfirst}`;  
 
     }

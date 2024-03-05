@@ -15,10 +15,6 @@ apiRouter.use('/birdwatchers',birdwatcherRouter)
 apiRouter.use('/shapes',shapesRouter)
 apiRouter.use('/watchertours',watcherTourRouter)
 
-// apiRouter.get('/',(req,res)=>{
-//     res.status(200).send("API Router is functioning")
-// })
-
 
 module.exports = apiRouter
 
