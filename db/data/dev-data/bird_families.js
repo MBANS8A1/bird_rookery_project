@@ -378,7 +378,7 @@ const bird_familyD = [
   },
   {
     scientific_fam_name: "Sulidae",
-    f_description:"This famiyl consists of gannets and boobies; boobies inhabiting temperate waters and gannets in tropical and subtropical oceans. Plumage is mostly white ventrally and brown-black dorsally. THeir wings are long and set far back on their bodies. They have binocular vision due to the way their eyes are set in relation to the bills, with some billes being stout and conical. Their feet are  totilamate(webeed between all four toes). These Sulids breed in mixed colonies with other Sulids or sometimes with frigatebirds and comorants. Gannets are migratory while boobies are more sedentary.",
+    f_description:"This family consists of gannets and boobies; boobies inhabiting temperate waters and gannets in tropical and subtropical oceans. Plumage is mostly white ventrally and brown-black dorsally. THeir wings are long and set far back on their bodies. They have binocular vision due to the way their eyes are set in relation to the bills, with some billes being stout and conical. Their feet are  totilamate(webeed between all four toes). These Sulids breed in mixed colonies with other Sulids or sometimes with frigatebirds and comorants. Gannets are migratory while boobies are more sedentary.",
     clutch_size: 3,
     no_of_genera: 3,
     no_of_species: 10,

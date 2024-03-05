@@ -11,7 +11,8 @@ exports.getAllFamilies = (req,res,next) =>{
 }
 
 exports.sendFamilyById = (req,res,next) => {  
-    const {family_id} = req.params
+    const family_id = +req.params.family_id
+
     selectFamilyById(family_id).then((family) => res.status(200).send({family})).catch(next)
 }
 

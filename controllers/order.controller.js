@@ -8,7 +8,9 @@ exports.getAllOrders = (req,res,next) =>{
 }
 
 exports.sendOrderById = (req,res,next)=>{
-   const {order_id} = req.params
+   // const {order_id} = req.params
+   const order_id = +req.params.order_id
+
    selectOrderById(order_id).then((order)=> res.status(200).send({order})).catch(next)
 }
 

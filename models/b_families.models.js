@@ -10,27 +10,27 @@ exports.selectAllFamilies = (order1,order2,sort_byfirst,sort_bysecond) =>{
 
 
     if(sort_byfirst && !sortbyGreenList1.includes(sort_byfirst)){
-        return Promise.reject({status: 400, message: 'Invalid sort_byfirst query string'})
+        return Promise.reject({status: 400, err: 'Invalid sort_byfirst query string'})
     }
 
     if(sort_bysecond && !sortbyGreenList2.includes(sort_bysecond)){
-        return Promise.reject({status: 400, message: 'Invalid sort_bysecond query string'})
+        return Promise.reject({status: 400, err: 'Invalid sort_bysecond query string'})
     }
 
  
     if(order1 && !orderbyGreenList.includes(order1.toUpperCase())){
-        return Promise.reject({status: 400, message: 'Invalid order1 query string'})
+        return Promise.reject({status: 400, err: 'Invalid order1 query string'})
     }
 
     if(order2 && !orderbyGreenList.includes(order2.toUpperCase())){
-        return Promise.reject({status: 400, message: 'Invalid order2 query string'})
+        return Promise.reject({status: 400, err: 'Invalid order2 query string'})
     }
 
 
     if(sort_byfirst){
         queryStr += ` ORDER BY ${sort_byfirst}`;
     }
-
+   
     if(order1 && sort_byfirst){
         queryStr += ` ${order1.toUpperCase()}`;
     }
@@ -54,10 +54,28 @@ exports.selectAllFamilies = (order1,order2,sort_byfirst,sort_bysecond) =>{
 }
 
 exports.selectFamilyById = (family_id) => {
-    return db.query(`SELECT * FROM bird_families WHERE family_id = $1;`,[family_id]).then((result)=> result.rows[0])
+
+    const letterRegex = /[^0-9]+/ig
+    if(letterRegex.test(family_id) && typeof family_id === 'number'){
+        return Promise.reject({status: 400, err: `Bad request: passed in family_id is not a valid id.`})
+    }
+
+    let queryStr = `SELECT * FROM bird_families WHERE family_id = $1;`
+    return db.query(queryStr,[family_id]).then((result)=>{
+        if(!(result.rowCount)){
+           return Promise.reject({status: 404, err: `No record with that family_id ${family_id} can be found.`})
+        }
+        else{
+           return result.rows[0]
+        }
+    } )
 }
 
 exports.insertNewFamily= (newFamily) =>{
+
+    if(Object.keys(newFamily).length !== 6){
+        return Promise.reject({status: 400, err :"malformed body or missing required fields"})
+    }
     const {scientific_fam_name,f_description,clutch_size,no_of_genera,no_of_species,o_id} = newFamily
     const fieldArrVals = [scientific_fam_name,f_description,clutch_size,no_of_genera,no_of_species,o_id]
     const queryString =`

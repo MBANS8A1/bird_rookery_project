@@ -9,19 +9,19 @@ exports.selectAllTours = (tour_type,sort_byfirst,sort_bysecond,order1,order2) =>
     FROM rookery_tour`;
 
   if(sort_byfirst && !sortbyGreenList1.includes(sort_byfirst)){
-      return Promise.reject({status: 400, message: 'Invalid sort_byfirst query string'})
+      return Promise.reject({status: 400, err: 'Invalid sort_byfirst query string'})
   }
 
   if(sort_bysecond && !sortbyGreenList2.includes(sort_bysecond)){
-      return Promise.reject({status: 400, message: 'Invalid sort_bysecond query string'})
+      return Promise.reject({status: 400, err: 'Invalid sort_bysecond query string'})
   }
 
   if(order1 && !orderbyGreenList.includes(order1.toUpperCase())){
-      return Promise.reject({status: 400, message: 'Invalid order1 query string'})
+      return Promise.reject({status: 400, err: 'Invalid order1 query string'})
   }
 
   if(order2 && !orderbyGreenList.includes(order2.toUpperCase())){
-      return Promise.reject({status: 400, message: 'Invalid order2 query string'})
+      return Promise.reject({status: 400, err: 'Invalid order2 query string'})
   }
 
   if(tour_type){
@@ -47,7 +47,7 @@ exports.selectAllTours = (tour_type,sort_byfirst,sort_bysecond,order1,order2) =>
   
   return db.query(queryStr,queryValues).then((result)=> {
     if(!(result.rows.length)){
-        return Promise.reject({status: 404, err: 'No results found for query'})
+        return Promise.reject({status: 404, err: 'No tours of that type.'})
 
     }else{
         return result.rows
@@ -57,10 +57,30 @@ exports.selectAllTours = (tour_type,sort_byfirst,sort_bysecond,order1,order2) =>
 }
 
 exports.selectTourById= (rtour_id) => {
-    return db.query(`SELECT * FROM rookery_tour WHERE rtour_id = $1;`,[rtour_id]).then((result)=> result.rows[0])
+
+    const letterRegex = /[^0-9]+/ig
+    if(letterRegex.test(rtour_id) && typeof rtour_id === 'number'){
+      return Promise.reject({status: 400, err: `Bad request: passed in rookery tour id is not a valid id.`})
+    
+    }
+    let queryStr = `SELECT * FROM rookery_tour WHERE rtour_id = $1;`
+    return db.query(queryStr,[rtour_id]).then((result)=> {
+        if(!(result.rowCount)){
+          return Promise.reject({status: 404, err: `No record with that rookery tour id ${rtour_id} can be found.`})
+
+        }else{
+ 
+          return result.rows[0]
+        }
+
+    })
 }
 
 exports.insertNewTour= (newTour) =>{
+
+    if(Object.keys(newTour).length !== 6){
+    return Promise.reject({status: 400, err :"malformed body or missing required fields"})
+    }
     const {tour_name,tour_type,length_minutes,location,cost_pennies,date } = newTour
     const fieldArrVals = [tour_name,tour_type,length_minutes,location,cost_pennies,date]
     const queryString =`
@@ -75,6 +95,21 @@ exports.insertNewTour= (newTour) =>{
   }
 
   exports.updateTourDate = (rtour_id,date) =>{
+
+    if(!date){
+      return Promise.reject({status: 400, err :"malformed body or missing required fields"})
+    }
+
+    const letterRegex = /[^0-9]+/g
+    if(letterRegex.test(rtour_id) && typeof(rtour_id) === 'number'){
+    return Promise.reject({status: 400, err: `Bad patch request: passed in rtour_id is not a valid id.`})
+    }
+     const testRegex = /^\d{4}\-\d{2}\-\d{2}\s\d{2}\:\d{2}\:\d{2}\+\d{1,2}$/
+
+     if(Number((date)) !== NaN && !(testRegex.test(date))){
+      return Promise.reject({status: 400, err: `Bad patch request: property has wrong datatype attached`})
+    }
+   
     const queryStr = `UPDATE rookery_tour
           SET date = $1
           WHERE rtour_id = $2
@@ -84,15 +119,31 @@ exports.insertNewTour= (newTour) =>{
   }
 
   exports.updateTourCost = (rtour_id,cost_pennies) =>{
+
+    //  const numRegex = /[0-9\.]+/ig
+
+    //  if(Number(cost_pennies) !== NaN &&)
+
+    const letterRegex = /[^0-9]+/ig
+    if(letterRegex.test(rtour_id) && typeof rtour_id === 'number'){
+    return Promise.reject({status: 400, err: `Bad patch request: passed in rtour_id is not a valid id.`})
+    }
     const queryStr = `UPDATE rookery_tour
           SET cost_pennies = $1
           WHERE rtour_id  = $2
           RETURNING 
           *;`
     return db.query(queryStr,[cost_pennies,rtour_id]).then((result)=>result.rows[0])
+   
   }
   
   exports.updateTourLength = (rtour_id ,length_minutes) =>{
+
+    
+    const letterRegex = /[^0-9]+/ig
+    if(letterRegex.test(rtour_id) && typeof rtour_id === 'number'){
+    return Promise.reject({status: 400, err: `Bad patch request: passed in rtour_id is not a valid id.`})
+    }
     const queryStr = `UPDATE rookery_tour
           SET length_minutes = $1
           WHERE rtour_id  = $2
@@ -108,5 +159,11 @@ exports.insertNewTour= (newTour) =>{
           RETURNING
           *;`
   
-     return db.query(queryStr,[rtour_id]).then(()=> null)
+     return db.query(queryStr,[rtour_id]).then((result)=> {
+      if(result.rows[0] === undefined){
+        return Promise.reject({status: 404, err: `cannot delete-tour with that id was already deleted or id not in original dataset`})
+  
+      }
+      return result.rows[0]
+     })
   }

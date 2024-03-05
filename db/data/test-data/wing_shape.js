@@ -1,10 +1,10 @@
 
 const wing_shapesTD  =[
     {
-        shape_name:"Passive soaring wings",
-        w_description:"These wings have long broad feathers that are spread out integrated wing slots for warm air to rise through (creating \'thermals\') that help the bird rise even higher in the sky. This mechanism of maintaining altitude helps the bird to conserve energy and circle on any prey spotted.",
-        image:"../../../bird_images/passive_soaring_wings.png" //1 -> now id1
-        //eagles hawks cranes vultures
+        shape_name:"Hovering wings",
+        w_description:"These are small but quick wings shaped around adapted blood vessels and nerves to help create incredibly fast movements. These wings are good for birds that sip nectar like the Ruby-throated Hummingbird.",
+        image: "../../../bird_images/hovering_wings_pattern.jpg" //5
+        //hummingbirds and swifts
     },
     {
         shape_name:"Elliptical wings",

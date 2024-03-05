@@ -9,7 +9,8 @@ exports.getAllBWatchers = (req,res,next) =>{
    }
 
 exports.sendBirdWatcherById = (req,res,next) =>{
-    const {bw_id} = req.params
+    // const {bw_id} = req.params
+    const bw_id = +req.params.bw_id
     selectBirdWatcherById(bw_id).then((birdwatcher) => res.status(200).send({birdwatcher})).catch(next)
 }
 
@@ -34,8 +35,8 @@ exports.removeBirdWatcher = (req,res,next) =>{
     let {bw_id} = req.params
     bw_id *= 1;
     deleteBirdWatcherRecord(bw_id).then(() => {
-        return res.status(204).send(null).catch(next)
-    })
+        return res.status(204).send(null)
+    }).catch(next)
 }
 
 

@@ -11,7 +11,8 @@ exports.getAllBirds = (req,res,next) =>{
 }
 
 exports.sendBirdById = (req,res,next) => {
-    const {bird_id} = req.params
+    // const {bird_id} = req.params
+    const bird_id = +req.params.bird_id
     selectBirdById(bird_id).then((bird) => res.status(200).send({bird})).catch(next)
 };
 
@@ -26,6 +27,6 @@ exports.removeBird = (req,res,next) =>{
     let {bird_id} = req.params
     bird_id *= 1;
     deleteBird(bird_id).then(() => {
-        return res.status(204).send(null).catch(next)
-    })
+        return res.status(204).send(null)
+    }).catch(next)
 }

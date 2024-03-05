@@ -1,4 +1,3 @@
-const express = require('express');
 const {getAllShapes,sendShapeById} = require('./controllers/wingshape.controller.js')
 const {getAllBirds,sendBirdById,addNewBird,removeBird} = require('./controllers/birds.controller.js')
 const {getAllFamilies,sendFamilyById,addNewFamily} = require('./controllers/family.controller.js')
@@ -6,6 +5,8 @@ const {getAllOrders,sendOrderById,addNewOrder} = require('./controllers/order.co
 const {getAllBWatchers,sendBirdWatcherById,addNewBirdWatcher,modifyBirdWatcherEmail,removeBirdWatcher} = require('./controllers/bwatchers.controller.js')
 const {getAllTours,sendTourById,addNewTour,modifyTourDate,modifyTourCost,modifyTourLength,removeTour} = require('./controllers/rtour.controller.js')
 const {getAllWatcherTours,sendWatcherTourById,addNewWatcherTour,modifyTourAssigned} = require('./controllers/watchertours.controller.js')
+
+const express = require('express');
 const app = express();
 app.use(express.json())
 
@@ -18,26 +19,107 @@ app.use((req, res, next) => {
     next()
   });
 
-  const errorLogger = (err,req,res,next) =>{
-    console.log(`Error : ${err.message}`)
-    next(err)
-  }
+ 
+ 
+//   const errorLogger = (err, req, res, next) => {
+//     console.log(err)
+//     console.log( `Error:  ${err.status}, ${err.message}!`) 
+//     next(err) // calling next middleware
+//   }
 
-  const handleNotFound = (req,res,next)=>{   
-      res.status(404).send({message: 'HTTP 404 error: path cannot be found'})  
-    next()
-    
-  }
-  const errorResponder = (err,req,res,next) =>{
-      if(err.statusCode  && err.message){
-      res.status(err.statusCode).send({message: err.message})
-      }
-      next(err)
-  }
+ 
+
+//   const errorResponder = (err,req,res,next) =>{
+//     err.statusCode = err.status || 400
+//     if(err.status && err.message){
+//     res.status(err.statusCode).send({status: err.statusCode, message: err.message})
+//     }else{
+//     next(err)
+//     }
+//  }
+
   
-  const handleServerError = (err, req,res,next) => {
-    res.status(500).send(err.message)
+//   const handleBadRequest = (req,res,next)=>{ 
+//     res.status(400).send({status: 400, message: "bad request"})
+    
+//     next()
+ 
+//   }
+
+//   const handleNotFound = (req,res,next)=>{   
+//     res.status(404).send({status: 404, message: "path not found"}) 
+
+//     next()
+    
+//   }
+  
+  
+//   const handleServerError = (err, req,res,next) => {
+//     res.status(500).send('Internal server error')
+//   }
+// const errorLogger = (err, req, res, next) => {
+//   console.log( `error: ${err.message}`) 
+//   next(err) 
+// }
+
+// const errorResponder = (err, req, res, next) => {
+    
+//   const status = err.status || 400
+//   res.status(status).send(err.message)
+// }
+
+// const invalidPathHandler = (req, res, next) => {
+//   res.status(404)
+//   res.send("HTTP 404 error: invalid path")
+// }
+
+// app.use((err, req, res, next) => {
+//   // handle custom errors
+//   if (err.status && err.message) {
+//     res.status(err.status).send({ message: err.message });
+//   }
+//   // handle specific psql errors
+//   else if (err.code === '22P02') {
+//     res.status(400).send({ message: err.message || 'Bad Request' });
+//   } else {
+//     // if the error hasn't been identified,
+//     // respond with an internal server error
+//     console.log(err);
+//     res.status(500).send({ message: 'Internal Server Error' });
+//   }
+// });
+
+const handle404 = (req, res) => {
+  res.status(404).send({msg: "path not found"})
+}
+
+const handleBadRequest = (err,req,res,next) =>{
+  if(err.status){
+     res.status(err.status).send({err: err.err})
   }
+  next(err)
+}
+
+//sql error
+const handlepSqlErrors = (err,req,res,next) =>{
+
+ if (err.code ==='23502'){
+     res.status(406).send({msg: 'violates not-null constraint not acceptable request body or missing column or field'})
+ }
+ else if(err.code === '22P02'){
+     res.status(400).send({msg: 'property-value is of the wrong datatype or request body is malformed'})
+
+ }
+ next(err)
+}
+
+
+//internal server error
+const handleServerError = (err, req, res) => {
+ console.log(err)
+ res.status(500).send({msg: "internal server error"})
+}
+
 
 
 
@@ -60,12 +142,12 @@ app.get('/api/tours/:rtour_id',sendTourById)
 app.get('/api/watchertours/:watcher_tour_id',sendWatcherTourById)
 
 //POST- adding new row(s) to the bird rookery
-app.post('/api/birdwatchers',addNewBirdWatcher)
-app.post('/api/tours',addNewTour)
+app.post('/api/birdwatchers',addNewBirdWatcher)//done
+app.post('/api/tours',addNewTour)//done
 app.post('/api/watchertours',addNewWatcherTour) //needed to have posted new birdwatcher and tour
-app.post('/api/orders',addNewOrder)
-app.post('/api/families',addNewFamily)
-app.post('/api/birds',addNewBird)
+app.post('/api/orders',addNewOrder)//done
+app.post('/api/families',addNewFamily)//done
+app.post('/api/birds',addNewBird)//done
 
 //PATCH -modifying record values for already seeded data
 app.patch('/api/birdwatchers/:bw_id',modifyBirdWatcherEmail) //working
@@ -82,11 +164,30 @@ app.delete('/api/tours/:rtour_id',removeTour)
 app.delete('/api/birds/:bird_id',removeBird)
 
 
+app.all('*', handle404)
 
-app.use(errorLogger)
-app.use(handleNotFound)
-app.use(errorResponder)
+
+app.use(handleBadRequest)
+
+app.use(handlepSqlErrors)
+
+
 app.use(handleServerError)
+
+// // app.use(errorLogger)
+// app.use(errorResponder)
+
+// app.use(handleNotFound)
+
+// app.use(handleBadRequest)
+// app.use((err,res,req,next)=>{
+//   if (err.code === '22P02') {
+//     res.status(400).send({ message: err.message || 'Bad Request' });
+//   }else{
+//    res.status(500).send({ message: 'Internal Server Error' })
+//   }
+// })
+// app.use(handleServerError)
 
 
 module.exports = app

@@ -7,11 +7,11 @@ exports.selectAllBWatchers = (sort_by,email_address,order) =>{
   let queryValues = []
 
   if(sort_by && !sortbyGreenList.includes(sort_by)){
-    return Promise.reject({status: 400, message: 'Invalid sort_by query string'})
+    return Promise.reject({status: 400, err: 'Invalid sort_by query string.'})
   }
 
   if(order && !orderGreenList.includes(order.toUpperCase())){
-    return Promise.reject({status: 400, message: 'Invalid order query string'})
+    return Promise.reject({status: 400, err: 'Invalid order query string.'})
   }
 
   if(email_address){
@@ -29,7 +29,7 @@ exports.selectAllBWatchers = (sort_by,email_address,order) =>{
 
   return db.query(queryStr,queryValues).then((result)=>{
     if(!(result.rows.length)){
-        return Promise.reject({status: 404, err: 'No results found for query'})
+        return Promise.reject({status: 404, err: 'No record(s) with that email pattern.'})
 
     }else{
         return result.rows
@@ -39,11 +39,27 @@ exports.selectAllBWatchers = (sort_by,email_address,order) =>{
 }
 
 exports.selectBirdWatcherById = (bw_id) =>{
-    return db.query(`SELECT * FROM birdwatchers WHERE bw_id = $1;`,[bw_id]).then((result)=> result.rows[0])
+
+    const letterRegex = /[^0-9]+/ig
+    if(letterRegex.test(bw_id) && typeof bw_id === 'number'){
+      return Promise.reject({status: 400, err: `Bad request: passed in birdwatcher is is not a valid id.`})
+    }
+
+    let queryStr = `SELECT * FROM birdwatchers WHERE bw_id = $1;`
+    return db.query(queryStr,[bw_id]).then((result)=>{
+     if(!(result.rowCount)){
+      return Promise.reject({status: 404, err: `No record with that birdwatcher id ${bw_id} can be found.`})
+     }else{
+      return result.rows[0]
+     }
+    })
 
 }
 
 exports.insertNewBirdWatcher = (newBirdWatcher) =>{
+  if(Object.keys(newBirdWatcher).length !== 5){
+    return Promise.reject({status: 400, err :"malformed body or missing required fields"})
+ }
   const {formal_title,first_name,last_name,age,email_address} = newBirdWatcher
   const fieldArrVals = [formal_title,first_name,last_name,age,email_address]
   const queryString =`
@@ -58,6 +74,24 @@ exports.insertNewBirdWatcher = (newBirdWatcher) =>{
 }
 
 exports.updateBirdWatcherEmail = (bw_id,email_address) =>{
+//added 4/3/2024
+
+if(!email_address){
+  return Promise.reject({status: 400, err :"malformed body or missing required fields"})
+
+}
+
+const letterRegex = /[^0-9]+/ig
+if(letterRegex.test(bw_id) && typeof bw_id === 'number'){
+  return Promise.reject({status: 400, err: `Bad patch request: passed in birdwatcher id is not a valid id.`})
+}
+
+  if(Number((email_address)) !== NaN){
+    return Promise.reject({status: 400, err: `Bad patch request: property has wrong datatype attached`})
+  }
+
+
+
   const queryStr = `UPDATE birdwatchers
         SET email_address = $1
         WHERE bw_id = $2
@@ -68,10 +102,22 @@ exports.updateBirdWatcherEmail = (bw_id,email_address) =>{
 }
 
 exports.deleteBirdWatcherRecord = (bw_id) =>{
+
+
+
+  
   const queryStr = `DELETE FROM birdwatchers
         WHERE bw_id = $1
         RETURNING
         *;`
+  
+    
 
-   return db.query(queryStr,[bw_id]).then(()=> null)
+   return db.query(queryStr,[bw_id]).then((result)=>{
+    if(result.rows[0] === undefined){
+      return Promise.reject({status: 404, err: `cannot delete-birdwatcher with that id was already deleted or id not in original dataset`})
+
+    }
+    return result.rows[0]
+   })
 }

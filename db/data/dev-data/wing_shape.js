@@ -30,7 +30,7 @@ const wing_shapesD = [
         shape_name:"Hovering wings",
         w_description:"These are small but quick wings shaped around adapted blood vessels and nerves to help create incredibly fast movements. These wings are good for birds that sip nectar like the Ruby-throated Hummingbird.",
         image: "../../../bird_images/hovering_wings_pattern.jpg" //5
-        //hummingbirds
+        //hummingbirds and swifts
     },
     {
         shape_name:"Tapered flipper wings",
