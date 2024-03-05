@@ -11,7 +11,7 @@ const rookeryTourTD =[
     {
         tour_name :"White mountain forest creepy incline",
         tour_type :"Entertainment",
-        length_minutes:  "150",
+        length_minutes:  150,
         location : "USA",
         cost_pennies: "146700",
         date: '2024-07-07 15:10:20-5'//18 -> now id2
@@ -19,7 +19,7 @@ const rookeryTourTD =[
     {
         tour_name :"Daintree park funfest",
         tour_type :"Entertainment",
-        length_minutes:  "340",
+        length_minutes:  340,
         location : "Australia",
         cost_pennies: "593419",
         date: '2024-06-30 04:25:10+10'//20 -> now id3

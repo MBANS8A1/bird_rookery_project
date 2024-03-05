@@ -1749,7 +1749,7 @@ describe("PATCH request data to rookery database tests",()=>{
   }
 
   const newTourDateWrongType = {
-    date: 'help'
+    date: 45
 
   }
 

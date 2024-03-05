@@ -122,7 +122,7 @@ const rookeryTourD = [
     {
         tour_name :"White mountain forest creepy incline",
         tour_type :"Entertainment",
-        length_minutes:  "150",
+        length_minutes:  150,
         location : "USA",
         cost_pennies: "146700",
         date: '2024-07-07 15:10:20-5'//16
@@ -130,7 +130,7 @@ const rookeryTourD = [
     {
         tour_name :"Arctic tundra biting freeze",
         tour_type :"Educational",
-        length_minutes:  "405",
+        length_minutes:  405,
         location : "Russia",
         cost_pennies: "204600",
         date: '2024-10-22 11:30:00+3'//17
@@ -138,7 +138,7 @@ const rookeryTourD = [
     {
         tour_name :"Daintree park funfest",
         tour_type :"Entertainment",
-        length_minutes:  "340",
+        length_minutes:  340,
         location : "Australia",
         cost_pennies: "593419",
         date: '2024-06-30 04:25:10+10'//18

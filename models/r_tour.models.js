@@ -104,9 +104,9 @@ exports.insertNewTour= (newTour) =>{
     if(letterRegex.test(rtour_id) && typeof(rtour_id) === 'number'){
     return Promise.reject({status: 400, err: `Bad patch request: passed in rtour_id is not a valid id.`})
     }
-     const testRegex = /^\d{4}\-\d{2}\-\d{2}\s\d{2}\:\d{2}\:\d{2}\+\d{1,2}$/
+     const testRegex = /^\d{4}\-\d{2}\-\d{2}\s\d{2}\:\d{2}\:\d{2}(\+|\-)\d{1,2}$/
 
-     if(Number((date)) !== NaN && !(testRegex.test(date))){
+     if( !(testRegex.test(date))){
       return Promise.reject({status: 400, err: `Bad patch request: property has wrong datatype attached`})
     }
    

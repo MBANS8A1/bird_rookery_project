@@ -12,14 +12,14 @@ toursRouter.route('/:rtour_id')
 .delete(removeTour);
 
 
-toursRouter.route('/cost')
-.patch('/:rtour_id', modifyTourCost);
+toursRouter.route('/cost/:rtour_id')
+.patch(modifyTourCost);
 
-toursRouter.route('/date')
-.patch('/:rtour_id', modifyTourDate);
+toursRouter.route('/date/:rtour_id')
+.patch(modifyTourDate);
 
-toursRouter.route('/length')
-.patch('/:rtour_id',modifyTourLength);
+toursRouter.route('/length/:rtour_id')
+.patch(modifyTourLength);
 
 
 

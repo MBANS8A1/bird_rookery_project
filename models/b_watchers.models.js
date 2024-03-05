@@ -74,7 +74,6 @@ exports.insertNewBirdWatcher = (newBirdWatcher) =>{
 }
 
 exports.updateBirdWatcherEmail = (bw_id,email_address) =>{
-//added 4/3/2024
 
 if(!email_address){
   return Promise.reject({status: 400, err :"malformed body or missing required fields"})
@@ -86,7 +85,9 @@ if(letterRegex.test(bw_id) && typeof bw_id === 'number'){
   return Promise.reject({status: 400, err: `Bad patch request: passed in birdwatcher id is not a valid id.`})
 }
 
-  if(Number((email_address)) !== NaN){
+
+   const emailregex =  /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  if(!(emailregex.test(email_address))){
     return Promise.reject({status: 400, err: `Bad patch request: property has wrong datatype attached`})
   }
 
