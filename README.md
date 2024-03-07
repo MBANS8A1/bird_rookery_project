@@ -52,7 +52,7 @@ This should start the server on port 3001. Type this URI <http://localhost:3001>
 
 ### Important Directories
 
-- [__tests__](#tests-folder)
+- [\_\_tests\_\_](#tests-folder)
 
 - [controllers](#controllers-folder)
 
