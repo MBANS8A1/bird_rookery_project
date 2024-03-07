@@ -2,6 +2,7 @@
 node_modules
 #ignore environment variable files
 .env.development
+.env.production
 .env.test
 *.png
 *.jpg
