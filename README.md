@@ -67,7 +67,7 @@ This should start the server on port 3001. Type this URI <http://localhost:3001>
 ---
 
 
-### [__tests__ folder](#tests folder)
+### [__tests__ folder](#tests-folder)
 
 <p>This folder has all the jest tests for the database and for the utility functions that are used to to format the data into the nested array format the pg-format requires before the data can be seeded(inserted) into the tables.</p>
 
@@ -76,7 +76,7 @@ This should start the server on port 3001. Type this URI <http://localhost:3001>
   - utility_func.test.js
 ---
 
-### [controllers folder](#controllers folder)
+### [controllers folder](#controllers-folder)
 
 <p>This folder contains the necessary controllers files that invoke the models files and handle the client request with the information provided in the request body in order to send the correct data (query information) back to the client. There is also here general 404 Not Found controller file that has an extra middle ware that is used for testing purposes.</p>
 
@@ -91,7 +91,7 @@ This should start the server on port 3001. Type this URI <http://localhost:3001>
 
 ---
 
-### [db folder](#db folder)
+### [db folder](#db-folder)
 
 <p>This folder contains the test data and development related data that you can add to if you wish to add more species and classifications of birds in the future.Also it has the files to create the Pool connection object, create and insert into the tables and main seed file using promise-chains. Also is the SQL file to actually create the databases involved.</p>
 
@@ -119,7 +119,7 @@ This should start the server on port 3001. Type this URI <http://localhost:3001>
 
 ---
 
-### [models folder](#models folder)
+### [models folder](#models-folder)
 
 <p>This folder contains the files that deal with the CRUD operations and pass the data on to the controller files in the format the controller wants it in.</p>
 
@@ -134,7 +134,7 @@ This should start the server on port 3001. Type this URI <http://localhost:3001>
 
 ---
 
-### [routes folder](#routes folder)
+### [routes folder](#routes-folder)
 
 <p>This folder has the request endpoints attached to a root api router and these endpoints are sub-divided into smaller sub-routers. This offers better
 organization and helps to de-clutter the app.js file</p>
@@ -151,7 +151,7 @@ organization and helps to de-clutter the app.js file</p>
 
 ---
 
-### [public folder](#public folder)
+### [public folder](#public-folder)
 
 <p>This folder simply has the html and css files for the bird order images uploads that occur with multer and its associated functionality..</p>
 
