@@ -1,7 +1,7 @@
 # FLAPPY'S ENORMOUS ROOKERY
 
 
-![Here is flappy](./assets/birdcartoon.jpg)
+![Here is flappy](./assets/birdpic.jpeg)
 
 ---
 ## Description
