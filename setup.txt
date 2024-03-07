@@ -1,5 +1,3 @@
-
-
 ---
 SETTING UP POSTGRES AND CONNECTING TO THE DATABASE
 
@@ -8,7 +6,8 @@ You can connect to the database using a node-postgres Pool object or Client obje
 as they are needed an the config object properties (and their values) are passed to each client. It is optimal in most instances to use a Pool object
  when making multiple recurrent requests and the latency is negligible for making relevant queries.
 
-Setting up Postgres in your operating system:
+---
+SETTING UP POSTGRES IN YOUR OPERATING SYSTEM
 
 The first process involves setting up Postgres on your system which will vary depending on the operating system.
 
@@ -18,7 +17,7 @@ Then type psql into your terminal and you should see the psql version and =# in 
 In case of any errors or the above not showing using the following commands: 1) brew update, 2)brew doctor and 3) brew install postgresql
 
 If you see an error such as 'psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL: database "username" does not exist', 
-then run the command 'createdb' (without quotes and this should create the database)
+then run the command 'createdb' (without quotes and this should create the database).
 
 For Windows/Linux/Ubuntu:
 
@@ -35,12 +34,14 @@ If you get an error such as 'role "username-here" already exists' then you alrea
 You should be able to type psql and then you will be able to access psql which has the default database and any databases you create. Yout may have to run
 the command 'sudo service postgresql start' in order for psql command to work and for postgresuser=# to be displayed.
 
+---
 CREATING A POSTGRES PASSWORD:
 
 Now you can use the terminal command -> ALTER USER username WITH PASSWORD 'mypassword'
 (replace username with your postgres username and  'mypassword' with your chosen 'difficult to guess' password)
-You should see the ALTER keyword appear in the terminal, then  use \q to exit out of it
+You should see the ALTER keyword appear in the terminal, then  use \q to exit out of it.
 
+---
 
 SETTING STORAGE OF POSTGRES PASSWORD AND CONNECTION DETAILS:
 
@@ -62,7 +63,7 @@ Use the chmod command on the .pgpass file to give pertinent permissions for acce
 
 
 If you prefer to have authentication as a strict requirement you can pass the connection details (properties) of the postgres database using the a config object 
-with the process.env variable (development,production or testing)
+with the process.env variable (development,production or testing).
 
 In node-postgres the connection details should be passed like something similar to this:
 
